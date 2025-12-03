@@ -7,27 +7,31 @@ const Cultures = () => {
   return (
     <div className="mt-24 rounded-4xl bg-neutral-950 py-24 sm:mt-32 lg:mt-40 lg:py-32">
       <SectionIntro
-        eyebrow="Our culture"
-        title="Balance your passion with your passion for life."
+        eyebrow="Unsere Werte"
+        title="Professionell, verlässlich und persönlich."
         invert
       >
         <p>
-          We are a group of like-minded people who share the same core values.
+          Diese Prinzipien leiten uns bei der täglichen Arbeit und in der Zusammenarbeit
+          mit unseren Mandanten.
         </p>
       </SectionIntro>
       <Container className="mt-16">
         <GridList>
-          <GridListItem title="Loyalty" invert>
-            Our team has been with us since the beginning because none of them
-            are allowed to have LinkedIn profiles.
+          <GridListItem title="Vertrauen" invert>
+            Ihre Finanzdaten sind bei uns in sicheren Händen. Wir arbeiten mit höchster
+            Vertraulichkeit und Integrität und sind Ihr verlässlicher Partner in allen
+            steuerlichen Angelegenheiten.
           </GridListItem>
-          <GridListItem title="Trust" invert>
-            We don’t care when our team works just as long as they are working
-            every waking second.
+          <GridListItem title="Transparenz" invert>
+            Wir kommunizieren klar und verständlich. Sie erhalten regelmäßige Updates
+            und haben jederzeit Einblick in Ihre Zahlen. Keine versteckten Kosten,
+            keine Überraschungen.
           </GridListItem>
-          <GridListItem title="Compassion" invert>
-            You never know what someone is going through at home and we make
-            sure to never find out.
+          <GridListItem title="Kompetenz" invert>
+            Unser Team bildet sich kontinuierlich weiter, um Sie bei allen gesetzlichen
+            Änderungen optimal zu beraten. Jahrelange Erfahrung trifft auf aktuelles
+            Fachwissen.
           </GridListItem>
         </GridList>
       </Container>

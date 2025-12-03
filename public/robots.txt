@@ -1,0 +1,20 @@
+# robots.txt für 786.at (Banoz Consultancy)
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://786.at/sitemap.xml
+
+# Crawl-delay für alle Bots
+Crawl-delay: 1
+
+# Spezielle Regeln für Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Spezielle Regeln für Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 0

@@ -10,7 +10,6 @@ import { IoMdClose } from "react-icons/io";
 import Button from "./Button";
 import clsx from "clsx";
 import Offices from "./Offices";
-import SocialMedia from "./SocialMedia";
 import Footer from "./Footer";
 
 const Header = ({
@@ -27,11 +26,11 @@ const Header = ({
       <div className="flex items-center justify-between">
         {/* Logo */}
         <Link href={"/"} aria-label="Home">
-          <Logo invert={invert}>Abdullah Agency</Logo>
+          <Logo invert={invert}>Banoz Consultancy</Logo>
         </Link>
         <div className="flex items-center gap-x-8">
           <Button href={"/contact"} invert={invert}>
-            Contact us
+            Kontakt
           </Button>
           <button
             ref={toggleRef}
@@ -85,12 +84,12 @@ const Navigation = () => {
   return (
     <nav className="mt-px font-display text-5xl font-medium tracking-tight text-white">
       <NavigationRow>
-        <NavigationItem href="/work">Our Work</NavigationItem>
-        <NavigationItem href="/about">About Us</NavigationItem>
+        <NavigationItem href="/services">Leistungen</NavigationItem>
+        <NavigationItem href="/about">Über uns</NavigationItem>
       </NavigationRow>
       <NavigationRow>
-        <NavigationItem href="/process">Our Process</NavigationItem>
-        <NavigationItem href="/blog">Blog</NavigationItem>
+        <NavigationItem href="/contact">Kontakt</NavigationItem>
+        <NavigationItem href="/appointment">Termin buchen</NavigationItem>
       </NavigationRow>
     </nav>
   );
@@ -121,7 +120,7 @@ const RootLayoutInner = ({ children }) => {
         <div
           className="absolute left-0 right-0 top-2 z-40 pt-14"
           aria-hidden={expanded ? "true" : undefined}
-          inert={expanded ? "" : undefined}
+          inert={expanded ? true : undefined}
         >
           {/* Header */}
           <Header
@@ -143,7 +142,7 @@ const RootLayoutInner = ({ children }) => {
           style={{ height: expanded ? "auto" : "0.5rem" }}
           className="relative z-50 overflow-hidden bg-neutral-950 pt-2"
           aria-hidden={expanded ? undefined : "true"}
-          inert={expanded ? undefined : ""}
+          inert={expanded ? undefined : true}
         >
           <motion.div layout className="bg-neutral-800">
             <div ref={navRef} className="bg-neutral-950 pb-16 pt-14">
@@ -168,7 +167,7 @@ const RootLayoutInner = ({ children }) => {
                 <div className="grid grid-cols-1 gap-y-10 pb-16 pt-10 sm:grid-cols-2 sm:pt-16">
                   <div>
                     <h2 className="font-display text-base font-semibold text-white">
-                      Our offices
+                      Unsere Kanzlei
                     </h2>
                     <Offices
                       invert
@@ -177,9 +176,20 @@ const RootLayoutInner = ({ children }) => {
                   </div>
                   <div className="sm:border-l sm:border-transparent sm:pl-16">
                     <h2 className="font-display text-base font-semibold text-white">
-                      Follow us
+                      Schnellkontakt
                     </h2>
-                    <SocialMedia className="mt-6" invert />
+                    <div className="mt-6 text-sm text-neutral-300 space-y-2">
+                      <p>
+                        <a href="tel:+4369915121472" className="hover:text-white">
+                          +43 699 15121472
+                        </a>
+                      </p>
+                      <p>
+                        <a href="mailto:office@786.at" className="hover:text-white">
+                          office@786.at
+                        </a>
+                      </p>
+                    </div>
                   </div>
                 </div>
               </Container>

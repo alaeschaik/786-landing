@@ -1,6 +1,6 @@
 export function constructMetadata({
-  title = "Abdullah Agency ",
-  description = "Abdullah Agency is an open-source website.",
+  title = "Banoz Consultancy - Bilanzbuchhaltung in Wien",
+  description = "Professionelle Bilanzbuchhaltung, Jahresabschlüsse und Steuerberatung in Wien. Ihr zuverlässiger Partner für Buchhaltung, Personalverrechnung und Unternehmensberatung.",
   image = "/agency.PNG",
   icons = "/favicon.ico",
   noIndex = false,
@@ -22,11 +22,11 @@ export function constructMetadata({
       title,
       description,
       images: [image],
-      creator: "@KING_IN_JUNGLE",
+      creator: "@786services",
     },
     icons,
-    metadataBase: new URL("https://agency-website-abdullah.vercel.app/"),
-    themeColor: "#FFF",
+    metadataBase: new URL("https://786.at/"),
+    themeColor: "#1e3a8a",
     ...(noIndex && {
       robots: {
         index: false,

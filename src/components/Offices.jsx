@@ -21,17 +21,28 @@ const Offices = ({ invert = false, ...props }) => {
   return (
     <ul role="list" {...props}>
       <li>
-        <Office name="U.S.A" invert={invert}>
-          on bay mark
+        <Office name="Wien" invert={invert}>
+          Kalvarienberggasse 17/1
           <br />
-          Newtown city of Las Vegas
+          1170 Wien
+          <br />
+          <br />
+          <a href="tel:+4369915121472" className={invert ? "text-white hover:text-neutral-300" : "text-neutral-950 hover:text-neutral-700"}>
+            +43 699 15121472
+          </a>
+          <br />
+          <a href="mailto:office@786.at" className={invert ? "text-white hover:text-neutral-300" : "text-neutral-950 hover:text-neutral-700"}>
+            office@786.at
+          </a>
         </Office>
       </li>
       <li>
-        <Office name="London" invert={invert}>
-          13 long Street
+        <Office name="Öffnungszeiten" invert={invert}>
+          Montag - Freitag: 08:00 - 17:00
           <br />
-          Downtown, Allyway
+          Samstag: 09:00 - 12:00
+          <br />
+          Sonntag: Geschlossen
         </Office>
       </li>
     </ul>
