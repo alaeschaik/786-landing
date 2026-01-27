@@ -7,7 +7,7 @@ import { GridList, GridListItem } from "@/components/GridList";
 
 export const metadata = {
   title: "Leistungen",
-  description: "Unsere Leistungen: Buchhaltung, Jahresabschlüsse, Personalverrechnung, Controlling und Unternehmensberatung in Wien. Professionelle Bilanzbuchhaltung für KMU.",
+  description: "Unsere Leistungen: Buchhaltung, Jahresabschlüsse, Personalverrechnung und Unternehmensberatung in Wien. Professionelle Bilanzbuchhaltung für KMU.",
   alternates: {
     canonical: "/services",
   },
@@ -39,31 +39,33 @@ const LeistungenPage = () => {
                 Buchhaltung
               </h2>
               <p className="mt-6 text-base text-neutral-600">
-                Professionelle und zuverlässige Finanzbuchhaltung, die Ihnen den Rücken
-                freihält. Wir kümmern uns um alle Aspekte Ihrer Buchhaltung und sorgen
-                für Ordnung in Ihren Finanzen.
+                Professionelle und zuverlässige Finanzbuchhaltung für Ihr Unternehmen.
+                Wir sorgen für Ordnung in Ihren Finanzen und halten Ihnen den Rücken frei.
               </p>
               <div className="mt-12">
                 <GridList>
-                  <GridListItem title="Finanzbuchhaltung">
-                    Vollständige Verbuchung aller Geschäftsfälle mit Rückstellungen und
-                    Abschreibungen nach aktuellen gesetzlichen Vorgaben.
+                  <GridListItem title="Verbuchung">
+                    Verbuchung sämtlicher Geschäftsfälle nach aktuellen gesetzlichen
+                    Vorgaben.
                   </GridListItem>
-                  <GridListItem title="Anlagenbuchhaltung">
-                    Verwaltung und Bewertung Ihres Anlagevermögens mit automatischer
-                    Abschreibungsberechnung.
+                  <GridListItem title="Doppelte Buchhaltung">
+                    Vollständige doppelte Buchführung für bilanzierungspflichtige
+                    Unternehmen.
                   </GridListItem>
-                  <GridListItem title="Debitoren-/Kreditorenbuchhaltung">
-                    Professionelle Verwaltung Ihrer Forderungen und Verbindlichkeiten
-                    mit Mahnwesen und Zahlungsüberwachung.
+                  <GridListItem title="Einnahmen-Ausgaben-Rechnung">
+                    Pagatorische Buchhaltung für Einnahmen-Ausgaben-Rechner.
                   </GridListItem>
-                  <GridListItem title="Meldungen an Finanzamt">
-                    Termingerechte Erstellung und Übermittlung von UVA, ZM und
-                    Intrastat-Meldungen.
+                  <GridListItem title="Debitorenbuchhaltung">
+                    Verwaltung Ihrer Forderungen mit Mahnwesen und Zahlungsüberwachung.
                   </GridListItem>
-                  <GridListItem title="Betriebsprüfungen">
-                    Kompetente Betreuung und Vertretung bei Betriebsprüfungen durch
-                    das Finanzamt.
+                  <GridListItem title="Saldenlisten & Auswertungen">
+                    Erstellung von Saldenlisten und betriebswirtschaftlichen Auswertungen.
+                  </GridListItem>
+                  <GridListItem title="Umsatzsteuervoranmeldung">
+                    Termingerechte Erstellung und Übermittlung der UVA.
+                  </GridListItem>
+                  <GridListItem title="Kostenrechnung">
+                    Kostenrechnung und Kalkulation für Ihre Preisgestaltung.
                   </GridListItem>
                 </GridList>
               </div>
@@ -81,21 +83,29 @@ const LeistungenPage = () => {
               </p>
               <div className="mt-12">
                 <GridList>
+                  <GridListItem title="Überschussermittlung">
+                    Ermittlung des steuerlichen Überschusses nach den gesetzlichen
+                    Vorschriften.
+                  </GridListItem>
                   <GridListItem title="Einnahmen-Ausgaben-Rechnung">
                     Jahresabschlüsse für E/A-Rechner mit allen erforderlichen Anlagen
                     und Auswertungen.
                   </GridListItem>
+                  <GridListItem title="Betriebswirtschaftliche Auswertung">
+                    Aussagekräftige Auswertungen zur Beurteilung Ihrer
+                    Unternehmensentwicklung.
+                  </GridListItem>
+                  <GridListItem title="Bilanzanalyse">
+                    Analyse Ihrer Bilanz zur Identifikation von Stärken und
+                    Verbesserungspotenzialen.
+                  </GridListItem>
+                  <GridListItem title="Steuerliche Optimierung">
+                    Optimierung im Rahmen der gesetzlichen Möglichkeiten zur
+                    Minimierung Ihrer Steuerlast.
+                  </GridListItem>
                   <GridListItem title="Bilanzerstellung">
-                    Vollständige Bilanzen für bilanzpflichtige Unternehmen nach UGB
-                    und Steuerrecht.
-                  </GridListItem>
-                  <GridListItem title="Überschussrechnungen">
-                    Spezielle Abrechnungen für Vermietung und Verpachtung mit
-                    steuerlicher Optimierung.
-                  </GridListItem>
-                  <GridListItem title="Sonderbilanzen">
-                    Zwischen- und Sonderbilanzen für Kreditansuchen, Umgründungen oder
-                    besondere Anlässe.
+                    Bilanzen für kleine und mittlere Unternehmen nach UGB und
+                    Steuerrecht.
                   </GridListItem>
                 </GridList>
               </div>
@@ -113,56 +123,24 @@ const LeistungenPage = () => {
               </p>
               <div className="mt-12">
                 <GridList>
-                  <GridListItem title="Lohn- und Gehaltsverrechnung">
-                    Monatliche Erstellung aller Gehaltsabrechnungen mit automatischer
-                    Berechnung von Steuern und Sozialversicherung.
+                  <GridListItem title="Lohn- und Gehaltsberechnung">
+                    Monatliche Berechnung inkl. Überstunden, Prämien und Reisekosten.
                   </GridListItem>
-                  <GridListItem title="Kollektivvertragliche Einstufung">
-                    Korrekte Einreihung Ihrer Mitarbeiter nach den geltenden
-                    Kollektivverträgen.
+                  <GridListItem title="Steuerabzüge">
+                    Korrekte Berechnung aller Steuerabzüge und Abgaben.
                   </GridListItem>
-                  <GridListItem title="Krankenversicherungsverwaltung">
-                    Anmeldungen, Abmeldungen und laufende Kommunikation mit der
-                    Sozialversicherung.
+                  <GridListItem title="An- und Abmeldung">
+                    An- und Abmeldung der Dienstnehmer bei der Sozialversicherung.
                   </GridListItem>
-                  <GridListItem title="Sonderzahlungen">
-                    Abrechnung von Überstunden, Prämien, Reisekosten und anderen
-                    variablen Gehaltsbestandteilen.
+                  <GridListItem title="Lohnkonten">
+                    Führung der Lohnkonten und Personalakten.
                   </GridListItem>
-                  <GridListItem title="Jahresabrechnungen">
-                    Erstellung von Jahreslohnzetteln und Kommunalsteuererklärungen.
+                  <GridListItem title="Urlaub und Feiertage">
+                    Urlaubs- und Feiertagsberechnungen nach den gesetzlichen Vorgaben.
                   </GridListItem>
-                </GridList>
-              </div>
-            </div>
-
-            {/* Controlling Details */}
-            <div id="controlling">
-              <h2 className="font-display text-3xl font-medium tracking-tight text-neutral-950 sm:text-4xl">
-                Controlling
-              </h2>
-              <p className="mt-6 text-base text-neutral-600">
-                Behalten Sie den Überblick über Ihre Unternehmenszahlen. Unser
-                Controlling gibt Ihnen die Informationen, die Sie für wichtige
-                Entscheidungen brauchen.
-              </p>
-              <div className="mt-12">
-                <GridList>
-                  <GridListItem title="Unternehmensüberwachung">
-                    Laufende Überwachung Ihrer betriebswirtschaftlichen Kennzahlen
-                    mit Soll-Ist-Vergleichen.
-                  </GridListItem>
-                  <GridListItem title="Reporting">
-                    Regelmäßige, verständliche Auswertungen und Reports zu Ihrer
-                    Unternehmensentwicklung.
-                  </GridListItem>
-                  <GridListItem title="Kennzahlenanalyse">
-                    Analyse wichtiger Kennzahlen wie Liquidität, Rentabilität und
-                    Produktivität.
-                  </GridListItem>
-                  <GridListItem title="Entscheidungsgrundlagen">
-                    Aufbereitung von Daten und Fakten als Basis für strategische
-                    Unternehmensentscheidungen.
+                  <GridListItem title="Beratung Arbeitsverhältnisse">
+                    Beratung bei Gestaltung von Arbeitsverhältnissen und
+                    arbeitsrechtlichen Fragen.
                   </GridListItem>
                 </GridList>
               </div>
@@ -171,7 +149,7 @@ const LeistungenPage = () => {
             {/* Unternehmensberatung Details */}
             <div id="beratung">
               <h2 className="font-display text-3xl font-medium tracking-tight text-neutral-950 sm:text-4xl">
-                Unternehmensberatung
+                Unternehmensberatung & Vertretung
               </h2>
               <p className="mt-6 text-base text-neutral-600">
                 Wir begleiten Sie in allen unternehmerischen Phasen – von der Gründung
@@ -180,29 +158,31 @@ const LeistungenPage = () => {
               </p>
               <div className="mt-12">
                 <GridList>
-                  <GridListItem title="Unternehmensgründung">
-                    Umfassende Beratung bei der Gründung: von der Rechtsformwahl bis
-                    zur Behördenregistrierung.
+                  <GridListItem title="Beratung in Steuerfragen">
+                    Beratung in allen steuerlichen Themen im Ausmaß des BiBuG.
                   </GridListItem>
-                  <GridListItem title="Rechtsformwahl">
-                    Analyse und Empfehlung der optimalen Rechtsform für Ihr Vorhaben
-                    unter steuerlichen und rechtlichen Aspekten.
+                  <GridListItem title="Steuerplanung">
+                    Steuergestaltung und Steuerplanung zur Senkung der Steuerbelastung.
                   </GridListItem>
-                  <GridListItem title="Finanzplanung">
-                    Erstellung von Finanzplänen, Liquiditätsplanung und Cash-Flow-Analysen
-                    für eine solide Unternehmenssteuerung.
+                  <GridListItem title="Förderungen & Begünstigungen">
+                    Laufende Information über Förderungen und steuerliche Begünstigungen.
                   </GridListItem>
-                  <GridListItem title="Businessplan-Erstellung">
-                    Professionelle Businesspläne für Banken, Investoren oder
-                    Förderstellen.
+                  <GridListItem title="Sozialversicherungsberatung">
+                    Beratung in Beitrags-, Versicherungs- und Leistungsangelegenheiten
+                    der Sozialversicherungen.
                   </GridListItem>
-                  <GridListItem title="Sanierungs- und Krisenmanagement">
-                    Unterstützung in wirtschaftlich schwierigen Zeiten mit konkreten
-                    Lösungsansätzen und Restrukturierungsmaßnahmen.
+                  <GridListItem title="Organisationsberatung">
+                    Beratung zur Optimierung Ihrer Unternehmensstruktur und -prozesse.
                   </GridListItem>
-                  <GridListItem title="Nachfolgeplanung">
-                    Beratung bei der Unternehmensnachfolge und Übergabe an die nächste
-                    Generation.
+                  <GridListItem title="Unternehmensnachfolge">
+                    Planung, Prozessbegleitung und Beratung bei Unternehmensnachfolge.
+                  </GridListItem>
+                  <GridListItem title="Vertretung vor Behörden">
+                    Vertretung vor Abgabenbehörden, Sozialversicherungsträgern und
+                    Arbeitsmarktservice.
+                  </GridListItem>
+                  <GridListItem title="Prüfungsbegleitung">
+                    Begleitung bei Betriebsprüfungen und Beitragsüberprüfungen.
                   </GridListItem>
                 </GridList>
               </div>

@@ -12,8 +12,7 @@ export default function Home() {
             Ihr verlässlicher Partner für Bilanzbuchhaltung in Wien
           </h1>
           <p className="mt-6 text-xl text-neutral-600">
-            Banoz Consultancy bietet professionelle Buchhaltung, Jahresabschlüsse und
-            Steuerberatung für kleine und mittelständische Unternehmen. Mit jahrelanger
+            Banoz Consultancy bietet professionelle Buchhaltung und Jahresabschlüsse für kleine und mittelständische Unternehmen. Mit jahrelanger
             Erfahrung sorgen wir für Transparenz und Sicherheit in Ihrer Unternehmensführung.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
@@ -38,7 +37,7 @@ export default function Home() {
         <FadeIn>
           <div className="grid grid-cols-2 gap-8 md:grid-cols-4 lg:gap-12">
             <div className="text-center">
-              <div className="text-4xl font-bold text-neutral-950">15+</div>
+              <div className="text-4xl font-bold text-neutral-950">10+</div>
               <div className="mt-2 text-sm text-neutral-600">Jahre Erfahrung</div>
             </div>
             <div className="text-center">

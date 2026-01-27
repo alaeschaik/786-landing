@@ -40,7 +40,7 @@ const Offices = ({ invert = false, ...props }) => {
         <Office name="Öffnungszeiten" invert={invert}>
           Montag - Freitag: 08:00 - 17:00
           <br />
-          Samstag: 09:00 - 12:00
+          Samstag: Geschlossen
           <br />
           Sonntag: Geschlossen
         </Office>

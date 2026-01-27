@@ -8,7 +8,7 @@ const Services = () => {
     <>
       <SectionIntro
         eyebrow="Unsere Leistungen"
-        title="Professionelle Buchhaltung und Steuerberatung für Ihr Unternehmen"
+        title="Professionelle Buchhaltung und Beratung für Ihr Unternehmen"
         className="mt-24 sm:mt-32 lg:mt-40"
       >
         <p>
@@ -20,33 +20,26 @@ const Services = () => {
         <div className="lg:flex lg:items-start lg:justify-center">
           <List className="lg:w-full lg:max-w-5xl">
             <ListItem title="Buchhaltung" id="buchhaltung">
-              Professionelle Finanzbuchhaltung mit Verbuchung aller Geschäftsfälle,
-              Anlagenbuchhaltung, Debitoren- und Kreditorenbuchhaltung. Wir kümmern uns
-              um alle Meldungen an das Finanzamt (UVA, ZM, Intrastat) und unterstützen
-              Sie bei Betriebsprüfungen.
+              Verbuchung sämtlicher Geschäftsfälle, doppelte Buchhaltung, Einnahmen-Ausgaben-Rechnung,
+              Debitorenbuchhaltung, Erstellung von Saldenlisten und betriebswirtschaftlichen Auswertungen,
+              Umsatzsteuervoranmeldung (UVA) sowie Kostenrechnung und Kalkulation.
             </ListItem>
             <ListItem title="Jahresabschluss & Bilanzierung" id="jahresabschluss">
-              Erstellung von Jahresabschlüssen für Einnahmen-Ausgaben-Rechner,
-              Bilanzen für bilanzpflichtige Unternehmen, Überschussrechnungen
-              (Vermietung/Verpachtung) sowie Zwischen- und Sonderbilanzen für
-              Kreditansuchen oder besondere Anlässe.
+              Überschussermittlung und Einnahmen-Ausgaben-Rechnung, betriebswirtschaftliche
+              Auswertungen, Bilanzanalyse, steuerliche Optimierung im Rahmen der gesetzlichen
+              Möglichkeiten sowie Bilanzerstellung für kleine und mittlere Unternehmen.
             </ListItem>
             <ListItem title="Personalverrechnung" id="personal">
-              Komplette Lohn- und Gehaltsverrechnung, kollektivvertragliche
-              Einstufung, Krankenversicherungsverwaltung, Überstunden-, Prämien-
-              und Reisekostenverrechnung sowie jährliche Abrechnungen und
-              Kommunalsteuererklärungen.
+              Lohn- und Gehaltsberechnung inkl. Überstunden, Prämien und Reisekosten,
+              Berechnung der Steuerabzüge, An- und Abmeldung der Dienstnehmer, Führung
+              der Lohnkonten, Urlaubs- und Feiertagsberechnungen sowie Beratung bei
+              Gestaltung von Arbeitsverhältnissen.
             </ListItem>
-            <ListItem title="Controlling" id="controlling">
-              Effiziente Unternehmensüberwachung durch aktuelle und verlässliche
-              Informationen. Wir verschaffen Ihnen Transparenz über Ihre
-              Unternehmenskennzahlen und unterstützen Sie bei wichtigen Entscheidungen.
-            </ListItem>
-            <ListItem title="Unternehmensberatung" id="beratung">
-              Begleitung bei Unternehmensgründungen, Rechtsformwahl, Finanzplanung
-              und Cash-Flow-Analysen, Businessplan-Erstellung sowie Sanierungs- und
-              Krisenmanagement. Wir sind Ihr strategischer Partner für alle
-              unternehmerischen Herausforderungen.
+            <ListItem title="Unternehmensberatung & Vertretung" id="beratung">
+              Beratung in steuerlichen Themen im Rahmen des BiBuG, Steuerplanung zur Senkung der Steuerbelastung,
+              Beratung zu Förderungen und Begünstigungen, Sozialversicherungsberatung,
+              Organisationsberatung, Unternehmensnachfolge sowie Vertretung vor Abgabenbehörden
+              und Sozialversicherungsträgern.
             </ListItem>
           </List>
         </div>

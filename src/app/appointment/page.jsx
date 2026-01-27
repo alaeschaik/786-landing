@@ -7,7 +7,7 @@ import Button from "@/components/Button";
 
 export const metadata = {
   title: "Termin buchen",
-  description: "Vereinbaren Sie jetzt Ihr kostenloses Erstgespräch mit Banoz Consultancy. Online-Terminvereinbarung für Buchhaltung und Steuerberatung in Wien.",
+  description: "Vereinbaren Sie jetzt Ihr kostenloses Erstgespräch mit Banoz Consultancy. Online-Terminvereinbarung für Buchhaltung und Beratung im Rahmen des BiBuG in Wien.",
   alternates: {
     canonical: "/appointment",
   },
@@ -73,11 +73,6 @@ const TerminPage = () => {
                       label="Nachmittag (12-17 Uhr)"
                       name="timeSlot"
                       value="afternoon"
-                    />
-                    <RadioInput
-                      label="Samstag (9-12 Uhr)"
-                      name="timeSlot"
-                      value="saturday"
                     />
                     <RadioInput
                       label="Flexibel"
@@ -241,7 +236,7 @@ const TerminPage = () => {
                   </div>
                   <div className="flex justify-between">
                     <dt>Samstag:</dt>
-                    <dd className="font-semibold">09:00 - 12:00 Uhr</dd>
+                    <dd className="font-semibold">Geschlossen</dd>
                   </div>
                   <div className="flex justify-between">
                     <dt>Sonntag:</dt>

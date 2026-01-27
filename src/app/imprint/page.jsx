@@ -216,6 +216,22 @@ const ImpressumPage = () => {
                     GISA-Zahl: 37084486
                   </p>
                 </div>
+                <div>
+                  <p className="font-semibold text-neutral-950">4. Bilanzbuchhalter</p>
+                  <p className="text-sm mt-1">
+                    Bilanzbuchhaltung nach BibuG
+                    <br />
+                    Gewerbeberechtigung seit: 10.12.2025
+                    <br />
+                    Gewerberechtliche Geschäftsführung: Fahad Hassan
+                    <br />
+                    Spezielle Aufsichtsbehörde: Präsident der Wirtschaftskammer Österreich gemäß § 63 Bilanzbuchhaltungsgesetz 2014
+                    <br />
+                    Behörde gem. ECG: Bilanzbuchhaltungsbehörde
+                    <br />
+                    Adresse: 1170 Wien, Kalvarienberggasse 17/1
+                  </p>
+                </div>
               </div>
             </section>
 

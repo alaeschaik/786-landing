@@ -37,7 +37,6 @@ const ContactForm = () => {
               <RadioInput label="Jahresabschluss" name="service" value="jahresabschluss" />
               <RadioInput label="Personalverrechnung" name="service" value="personal" />
               <RadioInput label="Unternehmensberatung" name="service" value="beratung" />
-              <RadioInput label="Controlling" name="service" value="controlling" />
               <RadioInput label="Mehrere Bereiche" name="service" value="mehrere" />
             </div>
           </div>

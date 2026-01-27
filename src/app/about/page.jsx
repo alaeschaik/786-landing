@@ -62,6 +62,10 @@ const AboutPage = () => {
               <strong className="font-semibold text-neutral-950">
                 Syed Tayyab Hassan Naqvi
               </strong>
+              <br/>
+              <strong className="font-semibold text-neutral-950">
+                Syed Fahad Hassan Naqvi
+              </strong>
               <br />
               Geschäftsführer
               <br />

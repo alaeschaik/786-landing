@@ -45,9 +45,7 @@ const Footer = () => {
         <div className="mb-20 mt-24 border-t border-neutral-950/10 pt-12">
           <div className="flex flex-wrap items-end justify-between gap-x-6 gap-y-4">
             <Link href={"/"} aria-label="Home">
-              <Logo className="h-8" fillOnHover>
-                Banoz Consultancy
-              </Logo>
+              <Logo fillOnHover />
             </Link>
             <div className="flex flex-col items-end gap-2">
               <div className="flex gap-4 text-sm text-neutral-700">

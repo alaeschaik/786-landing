@@ -1,30 +1,38 @@
 import clsx from "clsx";
 import Link from "next/link";
+import Image from "next/image";
+import logoImage from "@/images/logo.svg";
 
-const Logo = ({ invert, href, className, children, fillOnHover, ...props }) => {
-  className = clsx(
-    className,
-    "black",
-    invert ? "text-white hover:text-blue-600" : "text-black hover:text-blue-600"
+const Logo = ({ invert, href, className, fillOnHover, ...props }) => {
+  const logoClass = clsx(
+    "relative block",
+    className
   );
-  const inner = <span className="relative">{children}</span>;
+
+  const inner = (
+    <Image
+      src={logoImage}
+      alt="Banoz Consultancy Logo"
+      className={clsx(
+        "h-12 w-auto transition-opacity duration-300",
+        invert ? "invert" : ""
+      )}
+      priority
+    />
+  );
+
   if (href) {
     return (
-      <Link href={href} className={className} {...props}>
+      <Link href={href} className={logoClass} {...props}>
         {inner}
       </Link>
     );
   }
+
   return (
-    <h2
-      className={clsx(
-        "cursor-pointer text-2xl font-semibold duration-300",
-        className
-      )}
-      {...props}
-    >
+    <div className={clsx("cursor-pointer", logoClass)} {...props}>
       {inner}
-    </h2>
+    </div>
   );
 };
 

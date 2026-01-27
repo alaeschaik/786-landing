@@ -1,6 +1,6 @@
 export function constructMetadata({
   title = "Banoz Consultancy - Bilanzbuchhaltung in Wien",
-  description = "Professionelle Bilanzbuchhaltung, Jahresabschlüsse und Steuerberatung in Wien. Ihr zuverlässiger Partner für Buchhaltung, Personalverrechnung und Unternehmensberatung.",
+  description = "Professionelle Bilanzbuchhaltung, Jahresabschlüsse und Beratung in Wien. Ihr zuverlässiger Partner für Buchhaltung, Personalverrechnung und Unternehmensberatung im Rahmen des BiBuG.",
   image = "/agency.PNG",
   icons = "/favicon.ico",
   noIndex = false,
