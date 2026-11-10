@@ -1,3 +1,23 @@
 @import "./base.css";
 @tailwind components;
 @tailwind utilities;
+
+/* Long German compound words (e.g. "Unternehmensberatung") must never overflow
+   on small screens: hyphenate properly instead of clipping or splitting randomly. */
+h1,
+h2,
+h3,
+h4,
+dt {
+  overflow-wrap: break-word;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  hyphenate-limit-chars: 10 4 4;
+}
+
+/* The extra-wide display cut (wdth 125) is too bulky on phones. */
+@media (max-width: 639px) {
+  .font-display {
+    font-variation-settings: "wdth" 100;
+  }
+}

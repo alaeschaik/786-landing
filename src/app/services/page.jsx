@@ -36,13 +36,13 @@ const LeistungenPage = () => {
       />
 
       {/* Detailed Services Section */}
-      <Container className="mt-24 sm:mt-32 lg:mt-40">
+      <Container className="mt-16 sm:mt-32 lg:mt-40">
         <FadeIn>
-          <div className="space-y-24">
+          <div className="space-y-16 sm:space-y-24">
             {/* Buchhaltung Details */}
             <div id="buchhaltung" className="scroll-mt-32">
               <ServiceHeading id="buchhaltung" />
-              <p className="mt-4 max-w-3xl text-lg text-neutral-600">
+              <p className="mt-4 max-w-3xl text-base text-neutral-600 sm:text-lg">
                 Professionelle und zuverlässige Finanzbuchhaltung für Ihr Unternehmen.
                 Wir sorgen für Ordnung in Ihren Finanzen und halten Ihnen den Rücken frei.
               </p>
@@ -78,7 +78,7 @@ const LeistungenPage = () => {
             {/* Jahresabschluss Details */}
             <div id="jahresabschluss" className="scroll-mt-32">
               <ServiceHeading id="jahresabschluss" />
-              <p className="mt-4 max-w-3xl text-lg text-neutral-600">
+              <p className="mt-4 max-w-3xl text-base text-neutral-600 sm:text-lg">
                 Rechtssichere Jahresabschlüsse und Bilanzen nach österreichischem
                 Steuerrecht. Wir erstellen Ihre Abschlüsse termingerecht und
                 nachvollziehbar.
@@ -116,7 +116,7 @@ const LeistungenPage = () => {
             {/* Personalverrechnung Details */}
             <div id="personal" className="scroll-mt-32">
               <ServiceHeading id="personal" />
-              <p className="mt-4 max-w-3xl text-lg text-neutral-600">
+              <p className="mt-4 max-w-3xl text-base text-neutral-600 sm:text-lg">
                 Korrekte und pünktliche Gehaltsabrechnung für Ihre Mitarbeiter. Wir
                 übernehmen die komplette Lohn- und Gehaltsverrechnung sowie alle
                 damit verbundenen Meldungen.
@@ -154,7 +154,7 @@ const LeistungenPage = () => {
             {/* Unternehmensberatung Details */}
             <div id="beratung" className="scroll-mt-32">
               <ServiceHeading id="beratung" />
-              <p className="mt-4 max-w-3xl text-lg text-neutral-600">
+              <p className="mt-4 max-w-3xl text-base text-neutral-600 sm:text-lg">
                 Wir begleiten Sie in allen unternehmerischen Phasen – von der Gründung
                 über das Wachstum bis zur Nachfolge. Profitieren Sie von unserer
                 langjährigen Erfahrung.

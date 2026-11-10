@@ -54,16 +54,16 @@ export const services = [
 export const ServiceHeading = ({ id }) => {
   const service = services.find((item) => item.id === id);
   return (
-    <div className="flex items-center gap-4">
+    <div className="flex items-center gap-3 sm:gap-4">
       <span
         className={clsx(
-          "flex h-14 w-14 flex-none items-center justify-center rounded-2xl",
+          "flex h-11 w-11 flex-none items-center justify-center rounded-xl sm:h-14 sm:w-14 sm:rounded-2xl",
           service.color
         )}
       >
         <service.icon className="h-7 w-7 text-neutral-950" />
       </span>
-      <h2 className="font-display text-3xl font-medium tracking-tight text-neutral-950 sm:text-4xl">
+      <h2 className="min-w-0 font-display text-2xl font-medium tracking-tight text-neutral-950 sm:text-4xl">
         {service.title}
       </h2>
     </div>
@@ -89,7 +89,7 @@ const Services = ({
                 <FadeIn className="h-full">
                   <Link
                     href={`/services#${service.id}`}
-                    className="group flex h-full flex-col rounded-3xl border border-neutral-200 bg-white p-8 transition hover:-translate-y-1 hover:border-neutral-950 hover:shadow-[6px_6px_0_0_theme(colors.neutral.950)]"
+                    className="group flex h-full flex-col rounded-3xl border border-neutral-200 bg-white p-6 transition sm:p-8 hover:-translate-y-1 hover:border-neutral-950 hover:shadow-[6px_6px_0_0_theme(colors.neutral.950)]"
                   >
                     <span
                       className={clsx(
@@ -99,7 +99,7 @@ const Services = ({
                     >
                       <service.icon className="h-7 w-7 text-neutral-950" />
                     </span>
-                    <h3 className="mt-6 font-display text-2xl font-semibold text-neutral-950">
+                    <h3 className="mt-5 font-display text-xl font-semibold text-neutral-950 sm:mt-6 sm:text-2xl">
                       {service.title}
                     </h3>
                     <p className="mt-3 text-base text-neutral-600">

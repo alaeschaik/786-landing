@@ -61,7 +61,7 @@ const AboutPage = () => {
       {/* Team Section */}
       <Container className="mt-24 sm:mt-32 lg:mt-40">
         <FadeIn className="rounded-4xl border border-neutral-200 bg-neutral-50 p-6 sm:p-10 lg:p-12">
-          <h2 className="font-display text-3xl font-medium tracking-tight text-neutral-950 sm:text-4xl">
+          <h2 className="font-display text-2xl font-medium tracking-tight text-neutral-950 sm:text-4xl">
             Unser Team
           </h2>
           <ul role="list" className="mt-8 flex flex-wrap gap-4">

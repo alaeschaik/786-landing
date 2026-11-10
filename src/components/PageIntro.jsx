@@ -15,7 +15,7 @@ const PageIntro = ({ eyebrow, title, children, centered = false }) => {
           <span className="sr-only"> - </span>
           <span
             className={clsx(
-              "mt-6 block max-w-5xl font-display text-4xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] break-words sm:text-5xl lg:text-6xl",
+              "mt-5 block max-w-5xl font-display text-3xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:mt-6 sm:text-5xl lg:text-6xl",
               centered && "mx-auto"
             )}
           >
@@ -24,7 +24,7 @@ const PageIntro = ({ eyebrow, title, children, centered = false }) => {
         </h1>
         <div
           className={clsx(
-            "mt-6 max-w-3xl text-xl text-neutral-600",
+            "mt-5 max-w-3xl text-lg text-neutral-600 sm:mt-6 sm:text-xl",
             centered && "mx-auto"
           )}
         >

@@ -59,10 +59,10 @@ export default function Home() {
         <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-12">
           <FadeIn className="lg:col-span-7">
             <Eyebrow as="p">Bilanzbuchhaltung in 1170 Wien</Eyebrow>
-            <h1 className="mt-6 font-display text-4xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-5xl lg:text-6xl xl:text-7xl">
+            <h1 className="mt-6 font-display text-[2rem] leading-[1.1] font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-5xl lg:text-6xl xl:text-7xl">
               Buchhaltung in Wien – <Highlight>einfach erledigt.</Highlight>
             </h1>
-            <p className="mt-6 max-w-2xl text-xl text-neutral-600">
+            <p className="mt-5 max-w-2xl text-lg text-neutral-600 sm:mt-6 sm:text-xl">
               Banoz Consultancy übernimmt Buchhaltung, Personalverrechnung und
               Jahresabschluss für kleine und mittelständische Unternehmen – damit
               Sie sich auf Ihr Geschäft konzentrieren können.

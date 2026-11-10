@@ -18,7 +18,7 @@ const SectionIntro = ({
         <h2>
           {eyebrow && (
             <>
-              <Eyebrow invert={invert} className="mb-6">
+              <Eyebrow invert={invert} className="mb-5 sm:mb-6">
                 {eyebrow}
               </Eyebrow>
               <span className="sr-only"> - </span>
@@ -29,7 +29,7 @@ const SectionIntro = ({
               "block font-display tracking-tight [text-wrap:balance]",
               smaller
                 ? "text-2xl font-semibold"
-                : "text-4xl font-medium sm:text-5xl",
+                : "text-3xl font-medium sm:text-5xl",
               invert ? "text-white" : "text-neutral-950"
             )}
           >
@@ -39,7 +39,7 @@ const SectionIntro = ({
         {children && (
           <div
             className={clsx(
-              "mt-6 text-xl",
+              "mt-5 text-lg sm:mt-6 sm:text-xl",
               invert ? "text-neutral-300" : "text-neutral-600"
             )}
           >

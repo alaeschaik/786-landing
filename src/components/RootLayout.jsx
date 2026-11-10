@@ -142,7 +142,7 @@ const NavigationItem = ({ href, children }) => {
 
 const Navigation = () => {
   return (
-    <nav className="mt-px font-display text-4xl font-medium tracking-tight text-white sm:text-5xl">
+    <nav className="mt-px font-display text-3xl font-medium tracking-tight text-white sm:text-5xl">
       <NavigationRow>
         <NavigationItem href="/services">Leistungen</NavigationItem>
         <NavigationItem href="/about">Über uns</NavigationItem>
