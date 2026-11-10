@@ -1,0 +1,12 @@
+node_modules
+.next
+out
+.git
+.idea
+.claude
+.vercel
+graphify-out
+npm-debug.log*
+.env*.local
+Dockerfile
+docker-compose.yml

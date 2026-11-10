@@ -1,0 +1,7 @@
+services:
+  web:
+    build: .
+    image: 786-landing
+    ports:
+      - "${PORT:-8080}:80"
+    restart: unless-stopped
