@@ -1,6 +1,7 @@
 import Container from "@/components/Container";
 import PageIntro from "@/components/PageIntro";
-import Services from "@/components/Services";
+import Highlight from "@/components/Highlight";
+import Services, { ServiceHeading } from "@/components/Services";
 import ContactSection from "@/components/ContactSection";
 import FadeIn from "@/components/FadeIn";
 import { GridList, GridListItem } from "@/components/GridList";
@@ -18,7 +19,7 @@ const LeistungenPage = () => {
     <>
       <PageIntro
         eyebrow="Unsere Leistungen"
-        title="Umfassende Buchhaltungslösungen für Ihr Unternehmen"
+        title={<>Umfassende Buchhaltungslösungen für Ihr <Highlight>Unternehmen</Highlight></>}
       >
         <p>
           Von der laufenden Buchhaltung bis zur strategischen Unternehmensberatung –
@@ -27,22 +28,25 @@ const LeistungenPage = () => {
         </p>
       </PageIntro>
 
-      <Services />
+      <Services
+        eyebrow="Überblick"
+        title="Wählen Sie Ihren Bereich"
+        intro="Ein Klick auf eine Leistung bringt Sie direkt zu allen Details."
+        className="mt-16 sm:mt-20"
+      />
 
       {/* Detailed Services Section */}
       <Container className="mt-24 sm:mt-32 lg:mt-40">
         <FadeIn>
           <div className="space-y-24">
             {/* Buchhaltung Details */}
-            <div id="buchhaltung">
-              <h2 className="font-display text-3xl font-medium tracking-tight text-neutral-950 sm:text-4xl">
-                Buchhaltung
-              </h2>
-              <p className="mt-6 text-base text-neutral-600">
+            <div id="buchhaltung" className="scroll-mt-32">
+              <ServiceHeading id="buchhaltung" />
+              <p className="mt-4 max-w-3xl text-lg text-neutral-600">
                 Professionelle und zuverlässige Finanzbuchhaltung für Ihr Unternehmen.
                 Wir sorgen für Ordnung in Ihren Finanzen und halten Ihnen den Rücken frei.
               </p>
-              <div className="mt-12">
+              <div className="mt-10">
                 <GridList>
                   <GridListItem title="Verbuchung">
                     Verbuchung sämtlicher Geschäftsfälle nach aktuellen gesetzlichen
@@ -72,16 +76,14 @@ const LeistungenPage = () => {
             </div>
 
             {/* Jahresabschluss Details */}
-            <div id="jahresabschluss">
-              <h2 className="font-display text-3xl font-medium tracking-tight text-neutral-950 sm:text-4xl">
-                Jahresabschluss & Bilanzierung
-              </h2>
-              <p className="mt-6 text-base text-neutral-600">
+            <div id="jahresabschluss" className="scroll-mt-32">
+              <ServiceHeading id="jahresabschluss" />
+              <p className="mt-4 max-w-3xl text-lg text-neutral-600">
                 Rechtssichere Jahresabschlüsse und Bilanzen nach österreichischem
                 Steuerrecht. Wir erstellen Ihre Abschlüsse termingerecht und
                 nachvollziehbar.
               </p>
-              <div className="mt-12">
+              <div className="mt-10">
                 <GridList>
                   <GridListItem title="Überschussermittlung">
                     Ermittlung des steuerlichen Überschusses nach den gesetzlichen
@@ -112,16 +114,14 @@ const LeistungenPage = () => {
             </div>
 
             {/* Personalverrechnung Details */}
-            <div id="personal">
-              <h2 className="font-display text-3xl font-medium tracking-tight text-neutral-950 sm:text-4xl">
-                Personalverrechnung
-              </h2>
-              <p className="mt-6 text-base text-neutral-600">
+            <div id="personal" className="scroll-mt-32">
+              <ServiceHeading id="personal" />
+              <p className="mt-4 max-w-3xl text-lg text-neutral-600">
                 Korrekte und pünktliche Gehaltsabrechnung für Ihre Mitarbeiter. Wir
                 übernehmen die komplette Lohn- und Gehaltsverrechnung sowie alle
                 damit verbundenen Meldungen.
               </p>
-              <div className="mt-12">
+              <div className="mt-10">
                 <GridList>
                   <GridListItem title="Lohn- und Gehaltsberechnung">
                     Monatliche Berechnung inkl. Überstunden, Prämien und Reisekosten.
@@ -135,8 +135,13 @@ const LeistungenPage = () => {
                   <GridListItem title="Lohnkonten">
                     Führung der Lohnkonten und Personalakten.
                   </GridListItem>
-                  <GridListItem title="Urlaub und Feiertage">
-                    Urlaubs- und Feiertagsberechnungen nach den gesetzlichen Vorgaben.
+                  <GridListItem title="Behördenkommunikation">
+                    Jahreslohnzettel, ÖGK-Clearingfälle, Arbeiterkammer-Meldungen
+                    und laufende Kommunikation mit Behörden.
+                  </GridListItem>
+                  <GridListItem title="Formulare & Muster">
+                    Dienstzettel, Arbeits- und Entgeltbestätigungen,
+                    Beitragskontonummer anfordern und weitere Formulare.
                   </GridListItem>
                   <GridListItem title="Beratung Arbeitsverhältnisse">
                     Beratung bei Gestaltung von Arbeitsverhältnissen und
@@ -147,16 +152,14 @@ const LeistungenPage = () => {
             </div>
 
             {/* Unternehmensberatung Details */}
-            <div id="beratung">
-              <h2 className="font-display text-3xl font-medium tracking-tight text-neutral-950 sm:text-4xl">
-                Unternehmensberatung & Vertretung
-              </h2>
-              <p className="mt-6 text-base text-neutral-600">
+            <div id="beratung" className="scroll-mt-32">
+              <ServiceHeading id="beratung" />
+              <p className="mt-4 max-w-3xl text-lg text-neutral-600">
                 Wir begleiten Sie in allen unternehmerischen Phasen – von der Gründung
                 über das Wachstum bis zur Nachfolge. Profitieren Sie von unserer
                 langjährigen Erfahrung.
               </p>
-              <div className="mt-12">
+              <div className="mt-10">
                 <GridList>
                   <GridListItem title="Beratung in Steuerfragen">
                     Beratung in allen steuerlichen Themen im Ausmaß des BiBuG.

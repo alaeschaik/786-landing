@@ -24,9 +24,9 @@ const ImpressumPage = () => {
         </p>
       </PageIntro>
 
-      <Container className="mt-24 sm:mt-32 lg:mt-40">
+      <Container className="mt-16 sm:mt-20">
         <FadeIn>
-          <div className="max-w-3xl space-y-12 text-base text-neutral-600">
+          <div className="max-w-4xl space-y-12 rounded-3xl border border-neutral-200 bg-white p-6 text-base text-neutral-600 sm:p-10 lg:p-12 break-words">
             {/* Unternehmensangaben */}
             <section>
               <h2 className="font-display text-2xl font-semibold text-neutral-950 mb-4">
@@ -104,10 +104,10 @@ const ImpressumPage = () => {
                     Website:
                   </strong>{" "}
                   <a
-                    href="https://786.at"
+                    href="https://www.786.at"
                     className="text-neutral-950 hover:text-neutral-600"
                   >
-                    786.at
+                    www.786.at
                   </a>
                 </p>
               </div>
@@ -225,7 +225,7 @@ const ImpressumPage = () => {
                     <br />
                     Gewerberechtliche Geschäftsführung: Fahad Hassan
                     <br />
-                    Spezielle Aufsichtsbehörde: Präsident der Wirtschaftskammer Österreich gemäß § 63 Bilanzbuchhaltungsgesetz 2014
+                    Spezielle Aufsichtsbehörde: Magistratisches Bezirksamt des XVII. Bezirkes
                     <br />
                     Behörde gem. ECG: Bilanzbuchhaltungsbehörde
                     <br />
@@ -287,6 +287,7 @@ const ImpressumPage = () => {
               </p>
               <ul className="list-disc list-inside space-y-1 mt-2">
                 <li>Gewerbeordnung (GewO)</li>
+                <li>Bilanzbuchhaltungsgesetz (BiBuG)</li>
                 <li>Unternehmensgesetzbuch (UGB)</li>
                 <li>E-Commerce-Gesetz (ECG)</li>
               </ul>

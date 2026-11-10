@@ -1,6 +1,7 @@
 import React from "react";
 import Container from "./Container";
 import FadeIn from "./FadeIn";
+import Eyebrow from "./Eyebrow";
 import clsx from "clsx";
 
 const SectionIntro = ({
@@ -17,14 +18,9 @@ const SectionIntro = ({
         <h2>
           {eyebrow && (
             <>
-              <span
-                className={clsx(
-                  "mb-6 block font-display text-base font-semibold",
-                  invert ? "text-white" : "text-neutral-950"
-                )}
-              >
+              <Eyebrow invert={invert} className="mb-6">
                 {eyebrow}
-              </span>
+              </Eyebrow>
               <span className="sr-only"> - </span>
             </>
           )}

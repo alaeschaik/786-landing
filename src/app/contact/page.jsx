@@ -1,6 +1,7 @@
 import ContactDetails from "@/components/ContactDetails";
 import ContactForm from "@/components/ContactForm";
 import Container from "@/components/Container";
+import Highlight from "@/components/Highlight";
 import PageIntro from "@/components/PageIntro";
 
 export const metadata = {
@@ -14,16 +15,16 @@ export const metadata = {
 const ContactPage = () => {
   return (
     <>
-      <PageIntro eyebrow="Kontakt" title="Lassen Sie uns sprechen">
+      <PageIntro eyebrow="Kontakt" title={<>Lassen Sie uns <Highlight>sprechen</Highlight></>}>
         <p>
           Vereinbaren Sie ein kostenloses Erstgespräch. Wir freuen uns darauf,
           Sie und Ihr Unternehmen kennenzulernen.
         </p>
       </PageIntro>
-      <Container className="mt-24 sm:mt-32 lg:mt-40">
-        <div className="grid grid-cols-1 gap-x-8 gap-y-24 lg:grid-cols-2">
-          <ContactDetails />
+      <Container className="mt-16 sm:mt-20">
+        <div className="grid grid-cols-1 gap-x-12 gap-y-16 lg:grid-cols-2">
           <ContactForm />
+          <ContactDetails />
         </div>
       </Container>
     </>

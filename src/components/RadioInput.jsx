@@ -1,12 +1,11 @@
+// Rendered as a selectable pill; the radio itself is visually hidden.
 const RadioInput = ({ label, ...props }) => {
   return (
-    <label className="flex gap-x-3">
-      <input
-        type="radio"
-        {...props}
-        className="h-6 w-6 flex-none appearance-none rounded-full border border-neutral-950/20 outline-none checked:border-[0.5rem] checked:border-neutral-950 focus-visible:ring-1 focus-visible:ring-neutral-950 focus-visible:ring-offset-2"
-      />
-      <span className="text-base/6 text-neutral-950">{label}</span>
+    <label className="cursor-pointer">
+      <input type="radio" {...props} className="peer sr-only" />
+      <span className="block rounded-full border border-neutral-300 px-4 py-2 text-center text-sm font-medium text-neutral-700 transition hover:border-neutral-950 peer-checked:border-neutral-950 peer-checked:bg-accent-300 peer-checked:text-neutral-950 peer-focus-visible:ring-2 peer-focus-visible:ring-neutral-950 peer-focus-visible:ring-offset-2">
+        {label}
+      </span>
     </label>
   );
 };

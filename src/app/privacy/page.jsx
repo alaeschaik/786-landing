@@ -24,9 +24,9 @@ const DatenschutzPage = () => {
         </p>
       </PageIntro>
 
-      <Container className="mt-24 sm:mt-32 lg:mt-40">
+      <Container className="mt-16 sm:mt-20">
         <FadeIn>
-          <div className="max-w-3xl space-y-12 text-base text-neutral-600">
+          <div className="max-w-4xl space-y-12 rounded-3xl border border-neutral-200 bg-white p-6 text-base text-neutral-600 sm:p-10 lg:p-12">
             {/* Einleitung */}
             <section>
               <p>

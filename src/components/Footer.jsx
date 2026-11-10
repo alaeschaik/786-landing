@@ -4,29 +4,24 @@ import FadeIn from "./FadeIn";
 import FooterNavigation from "./FooterNavigation";
 import Logo from "./Logo";
 import Link from "next/link";
+import Button from "./Button";
 const NewsletterForm = () => {
   return (
-    <div className="max-w-sm">
-      <h2 className="font-display text-sm font-semibold tracking-wider text-neutral-950">
+    <div className="max-w-sm rounded-3xl bg-accent-300 p-6 sm:p-8">
+      <h2 className="font-display text-lg font-semibold text-neutral-950">
         Jetzt Termin vereinbaren
       </h2>
-      <p className="mt-4 text-sm text-neutral-700">
+      <p className="mt-3 text-sm text-neutral-800">
         Kontaktieren Sie uns für ein kostenloses Erstgespräch und erfahren Sie,
         wie wir Ihr Unternehmen optimal betreuen können.
       </p>
-      <div className="mt-6 space-y-3">
-        <a
-          href="/appointment"
-          className="block w-full rounded-2xl bg-neutral-950 px-6 py-4 text-center text-base font-semibold text-white transition hover:bg-neutral-800"
-        >
+      <div className="mt-6 flex flex-col gap-3">
+        <Button href="/appointment" size="lg">
           Termin buchen
-        </a>
-        <a
-          href="/contact"
-          className="block w-full rounded-2xl border-2 border-neutral-950 px-6 py-4 text-center text-base font-semibold text-neutral-950 transition hover:bg-neutral-50"
-        >
+        </Button>
+        <Button href="/contact" variant="outline" size="lg">
           Kontakt aufnehmen
-        </a>
+        </Button>
       </div>
     </div>
   );

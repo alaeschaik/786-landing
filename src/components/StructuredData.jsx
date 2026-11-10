@@ -1,3 +1,5 @@
+import { faqs } from "@/constants/faq";
+
 export default function StructuredData() {
   const organizationSchema = {
     "@context": "https://schema.org",
@@ -145,56 +147,14 @@ export default function StructuredData() {
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Was ist Bilanzbuchhaltung und wer darf sie ausüben?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Bilanzbuchhaltung umfasst die Erstellung von Jahresabschlüssen, Bilanzen und betriebswirtschaftlichen Auswertungen. In Österreich dürfen diese Tätigkeiten gemäß dem Bilanzbuchhaltungsgesetz (BiBuG) nur von geprüften Bilanzbuchhaltern ausgeübt werden. Als zugelassener Bilanzbuchhalter bieten wir alle Leistungen im Rahmen des BiBuG an."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Welche Buchhaltungsleistungen bietet Banoz Consultancy an?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Wir bieten umfassende Buchhaltungsdienstleistungen: Laufende Buchhaltung (doppelte Buchführung und Einnahmen-Ausgaben-Rechnung), Jahresabschlüsse und Bilanzerstellung, Personalverrechnung mit Lohn- und Gehaltsabrechnung, Umsatzsteuervoranmeldung (UVA), sowie Unternehmensberatung und Vertretung vor Behörden."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Was kostet eine professionelle Buchhaltung in Wien?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Die Kosten für Buchhaltungsdienstleistungen richten sich nach dem Umfang Ihrer Geschäftstätigkeit, der Anzahl der Belege und dem gewünschten Leistungsumfang. Wir erstellen Ihnen gerne ein individuelles Angebot. Kontaktieren Sie uns für ein unverbindliches Erstgespräch."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Was ist der Unterschied zwischen Einnahmen-Ausgaben-Rechnung und doppelter Buchhaltung?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Die Einnahmen-Ausgaben-Rechnung (E/A-Rechnung) ist eine vereinfachte Form der Gewinnermittlung für kleinere Unternehmen. Die doppelte Buchhaltung ist für bilanzierungspflichtige Unternehmen vorgeschrieben und erfasst alle Geschäftsvorfälle auf mindestens zwei Konten. Wir beraten Sie, welche Methode für Ihr Unternehmen die richtige ist."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Wie läuft die Zusammenarbeit mit einem Bilanzbuchhalter ab?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Nach einem Erstgespräch analysieren wir Ihre Situation und erstellen ein individuelles Angebot. Die laufende Zusammenarbeit kann flexibel gestaltet werden: Sie können Ihre Belege digital oder physisch übermitteln. Wir übernehmen die Verbuchung, erstellen Auswertungen und kümmern uns um alle Fristen bei Finanzamt und Sozialversicherung."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Welche Fristen muss ich bei der Buchhaltung beachten?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Wichtige Fristen sind: Monatliche UVA-Meldung bis zum 15. des Folgemonats, Jahresabschluss innerhalb von 9 Monaten nach dem Bilanzstichtag, Steuererklärungen je nach Zuständigkeit. Als Ihr Bilanzbuchhalter überwachen wir alle Fristen und sorgen für termingerechte Einreichungen."
-        }
+    "mainEntity": faqs.map(({ question, answer }) => ({
+      "@type": "Question",
+      "name": question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": answer
       }
-    ]
+    }))
   };
 
   return (

@@ -1,23 +1,22 @@
-import Border from "./Border";
-import FadeIn, { FadeInStagger } from "./FadeIn";
+import FadeIn from "./FadeIn";
 
 export function StatList({ children, ...props }) {
   return (
-    <FadeInStagger {...props}>
-      <dl className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:auto-cols-fr lg:grid-flow-col lg:grid-cols-none">
+    <FadeIn {...props}>
+      <dl className="grid grid-cols-3 gap-4 rounded-3xl bg-accent-300 px-6 py-10 sm:gap-8 sm:px-12">
         {children}
       </dl>
-    </FadeInStagger>
+    </FadeIn>
   );
 }
 
 export function StatListItem({ label, value }) {
   return (
-    <Border as={FadeIn} position="left" className="flex flex-col-reverse pl-8">
-      <dt className="mt-2 text-base text-neutral-600">{label}</dt>
-      <dd className="font-display text-3xl font-semibold text-neutral-950 sm:text-4xl">
+    <div className="flex flex-col-reverse text-center">
+      <dt className="mt-2 text-sm font-medium text-neutral-800">{label}</dt>
+      <dd className="font-display text-4xl font-semibold text-neutral-950 sm:text-5xl">
         {value}
       </dd>
-    </Border>
+    </div>
   );
 }

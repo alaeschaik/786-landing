@@ -7,10 +7,43 @@ import Link from "next/link";
 import Logo from "./Logo";
 import { HiMenuAlt4 } from "react-icons/hi";
 import { IoMdClose } from "react-icons/io";
+import { HiOutlineCalendarDays, HiOutlinePhone } from "react-icons/hi2";
 import Button from "./Button";
 import clsx from "clsx";
 import Offices from "./Offices";
 import Footer from "./Footer";
+
+const desktopLinks = [
+  { title: "Leistungen", href: "/services" },
+  { title: "Ablauf", href: "/#ablauf" },
+  { title: "Über uns", href: "/about" },
+  { title: "FAQ", href: "/#faq" },
+  { title: "Kontakt", href: "/contact" },
+];
+
+// Always-visible call and booking actions on small screens.
+const MobileActionBar = () => {
+  return (
+    <div className="fixed inset-x-0 bottom-0 z-40 border-t border-neutral-200 bg-white/95 p-3 backdrop-blur sm:hidden">
+      <div className="grid grid-cols-2 gap-3">
+        <a
+          href="tel:+4369915121472"
+          className="flex items-center justify-center gap-2 rounded-full px-4 py-3 text-sm font-semibold text-neutral-950 ring-2 ring-inset ring-neutral-950"
+        >
+          <HiOutlinePhone className="h-5 w-5" />
+          Anrufen
+        </a>
+        <Link
+          href="/appointment"
+          className="flex items-center justify-center gap-2 rounded-full bg-accent-400 px-4 py-3 text-sm font-semibold text-neutral-950"
+        >
+          <HiOutlineCalendarDays className="h-5 w-5" />
+          Termin buchen
+        </Link>
+      </div>
+    </div>
+  );
+};
 
 const Header = ({
   panelId,
@@ -28,9 +61,35 @@ const Header = ({
         <Link href={"/"} aria-label="Home">
           <Logo invert={invert} />
         </Link>
-        <div className="flex items-center gap-x-8">
-          <Button href={"/contact"} invert={invert}>
-            Kontakt
+        {!invert && (
+          <nav className="hidden items-center gap-x-1 lg:flex">
+            {desktopLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="rounded-full px-4 py-2 text-sm font-semibold text-neutral-700 transition hover:bg-neutral-100 hover:text-neutral-950"
+              >
+                {link.title}
+              </Link>
+            ))}
+          </nav>
+        )}
+        <div className="flex items-center gap-x-6">
+          {!invert && (
+            <a
+              href="tel:+4369915121472"
+              className="hidden items-center gap-2 text-sm font-semibold text-neutral-950 hover:text-neutral-600 xl:flex"
+            >
+              <HiOutlinePhone className="h-5 w-5" />
+              +43 699 15121472
+            </a>
+          )}
+          <Button
+            href={"/appointment"}
+            variant={invert ? "inverted" : "accent"}
+            className="hidden sm:inline-flex"
+          >
+            Termin buchen
           </Button>
           <button
             ref={toggleRef}
@@ -40,6 +99,7 @@ const Header = ({
             aria-controls={panelId}
             className={clsx(
               "group -m-2.5 rounded-full p-2.5 transition",
+              !invert && "lg:hidden",
               invert ? "hover:bg-white/10" : "hover:bg-neutral-950/10"
             )}
             aria-label="Toggle navigation"
@@ -75,14 +135,14 @@ const NavigationItem = ({ href, children }) => {
       className="group relative isolate -mx-6 bg-neutral-950 px-6 py-10 even:mt-px sm:mx-0 sm:px-0 sm:py-16 sm:odd:pr-16 sm:even:mt-0 sm:even:border-l sm:even:border-neutral-800 sm:even:pl-16"
     >
       {children}
-      <span className="absolute inset-y-0 -z-10 w-screen bg-neutral-900 opacity-0 transition group-odd:right-0 group-even:left-0 group-hover:opacity-100" />
+      <span className="absolute inset-y-0 -z-10 w-full bg-neutral-900 opacity-0 transition group-hover:opacity-100" />
     </Link>
   );
 };
 
 const Navigation = () => {
   return (
-    <nav className="mt-px font-display text-5xl font-medium tracking-tight text-white">
+    <nav className="mt-px font-display text-4xl font-medium tracking-tight text-white sm:text-5xl">
       <NavigationRow>
         <NavigationItem href="/services">Leistungen</NavigationItem>
         <NavigationItem href="/about">Über uns</NavigationItem>
@@ -90,6 +150,10 @@ const Navigation = () => {
       <NavigationRow>
         <NavigationItem href="/contact">Kontakt</NavigationItem>
         <NavigationItem href="/appointment">Termin buchen</NavigationItem>
+      </NavigationRow>
+      <NavigationRow>
+        <NavigationItem href="/#ablauf">Ablauf</NavigationItem>
+        <NavigationItem href="/#faq">FAQ</NavigationItem>
       </NavigationRow>
     </nav>
   );
@@ -180,6 +244,8 @@ const RootLayoutInner = ({ children }) => {
                     </h2>
                     <div className="mt-6 text-sm text-neutral-300 space-y-2">
                       <p>
+                        Syed Tayyab Hassan Naqvi
+                        <br />
                         <a href="tel:+4369915121472" className="hover:text-white">
                           +43 699 15121472
                         </a>
@@ -200,7 +266,7 @@ const RootLayoutInner = ({ children }) => {
       <motion.div
         layout
         style={{ borderTopLeftRadius: 40, borderTopRightRadius: 40 }}
-        className="relative flex flex-auto overflow-hidden bg-white pt-14"
+        className="relative flex flex-auto overflow-hidden bg-white pb-20 pt-14 sm:pb-0"
       >
         <motion.div
           layout
@@ -211,6 +277,7 @@ const RootLayoutInner = ({ children }) => {
           <Footer />
         </motion.div>
       </motion.div>
+      <MobileActionBar />
     </MotionConfig>
   );
 };

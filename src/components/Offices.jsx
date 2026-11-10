@@ -27,6 +27,8 @@ const Offices = ({ invert = false, ...props }) => {
           1170 Wien
           <br />
           <br />
+          Syed Tayyab Hassan Naqvi
+          <br />
           <a href="tel:+4369915121472" className={invert ? "text-white hover:text-neutral-300" : "text-neutral-950 hover:text-neutral-700"}>
             +43 699 15121472
           </a>
