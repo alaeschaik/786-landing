@@ -152,14 +152,14 @@ const AppointmentForm = () => {
       </form>
 
       {/* What happens next */}
-      <div className="mt-8 rounded-3xl bg-neutral-950 p-6 sm:p-8">
-        <h3 className="font-display text-lg font-semibold text-white">
+      <div className="mt-8 rounded-3xl bg-accent-100 p-6 sm:p-8">
+        <h3 className="font-display text-lg font-semibold text-neutral-900">
           Was passiert nach der Anfrage?
         </h3>
         <ol role="list" className="mt-6 space-y-4">
           {nextSteps.map((step, index) => (
-            <li key={step} className="flex gap-4 text-sm text-neutral-300">
-              <span className="flex h-6 w-6 flex-none items-center justify-center rounded-full bg-accent-400 text-xs font-bold text-neutral-950">
+            <li key={step} className="flex gap-4 text-sm text-neutral-700">
+              <span className="flex h-6 w-6 flex-none items-center justify-center rounded-full bg-white text-xs font-bold text-neutral-900 ring-1 ring-accent-300">
                 {index + 1}
               </span>
               {step}

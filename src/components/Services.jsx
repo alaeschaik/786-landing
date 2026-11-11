@@ -89,7 +89,7 @@ const Services = ({
                 <FadeIn className="h-full">
                   <Link
                     href={`/services#${service.id}`}
-                    className="group flex h-full flex-col rounded-3xl border border-neutral-200 bg-white p-6 transition sm:p-8 hover:-translate-y-1 hover:border-neutral-950 hover:shadow-[6px_6px_0_0_theme(colors.neutral.950)]"
+                    className="group flex h-full flex-col rounded-3xl border border-neutral-200 bg-white p-6 transition sm:p-8 hover:-translate-y-1 hover:border-accent-400 hover:shadow-lg hover:shadow-neutral-900/5"
                   >
                     <span
                       className={clsx(

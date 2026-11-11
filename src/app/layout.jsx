@@ -80,7 +80,7 @@ export default function Layout({ children }) {
   return (
     <html
       lang="de-AT"
-      className="h-full overflow-x-hidden bg-neutral-950 text-base antialiased text-neutral-100"
+      className="h-full overflow-x-hidden bg-white text-base antialiased text-neutral-900"
     >
       <head>
         <StructuredData />

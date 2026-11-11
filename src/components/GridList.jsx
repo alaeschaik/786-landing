@@ -26,7 +26,7 @@ export function GridListItem({ title, children, className, invert = false }) {
           "h-full rounded-3xl p-6 transition",
           invert
             ? "bg-white/5 text-neutral-300 ring-1 ring-white/10 hover:bg-white/10"
-            : "border border-neutral-200 bg-white text-neutral-600 hover:border-neutral-950"
+            : "border border-neutral-200 bg-white text-neutral-600 hover:border-accent-400"
         )}
       >
         <span

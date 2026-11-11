@@ -2,14 +2,13 @@ import Link from "next/link";
 import clsx from "clsx";
 
 const variants = {
-  primary: "bg-neutral-950 text-white hover:bg-neutral-800",
-  inverted: "bg-white text-neutral-950 hover:bg-neutral-200",
+  primary:
+    "bg-accent-400 text-neutral-900 shadow-sm shadow-accent-500/30 hover:bg-accent-300",
   accent:
-    "bg-accent-400 text-neutral-950 hover:bg-accent-300 shadow-[0_4px_0_0_theme(colors.neutral.950)] hover:shadow-[0_2px_0_0_theme(colors.neutral.950)] hover:translate-y-0.5",
+    "bg-accent-400 text-neutral-900 shadow-sm shadow-accent-500/30 hover:bg-accent-300",
+  inverted: "bg-white text-neutral-900 ring-1 ring-inset ring-neutral-200 hover:bg-neutral-50",
   outline:
-    "ring-2 ring-inset ring-neutral-950 text-neutral-950 hover:bg-neutral-950 hover:text-white",
-  outlineInverted:
-    "ring-2 ring-inset ring-white/40 text-white hover:bg-white hover:text-neutral-950",
+    "bg-white text-neutral-900 ring-1 ring-inset ring-neutral-300 hover:bg-neutral-50 hover:ring-neutral-400",
 };
 
 const sizes = {

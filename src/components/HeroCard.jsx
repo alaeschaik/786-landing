@@ -17,7 +17,7 @@ const HeroCard = () => {
     <div aria-hidden="true" className="relative mx-auto w-full max-w-sm">
       <div className="absolute -inset-4 -z-10 rotate-3 rounded-[2rem] bg-accent-300" />
       <div className="absolute -inset-4 -z-20 -rotate-2 rounded-[2rem] bg-brand-100" />
-      <div className="rounded-3xl border-2 border-neutral-950 bg-white p-6 shadow-[8px_8px_0_0_theme(colors.neutral.950)]">
+      <div className="rounded-3xl border border-neutral-200 bg-white p-6 shadow-xl shadow-neutral-900/10">
         <div className="flex items-center justify-between">
           <p className="font-display text-sm font-semibold text-neutral-950">
             Ihr Monat
@@ -36,7 +36,7 @@ const HeroCard = () => {
               transition={{ delay: 0.5 + index * 0.25, duration: 0.4 }}
             >
               <motion.span
-                className="flex h-6 w-6 flex-none items-center justify-center rounded-full bg-neutral-950"
+                className="flex h-6 w-6 flex-none items-center justify-center rounded-full bg-emerald-500"
                 initial={{ scale: shouldReduceMotion ? 1 : 0 }}
                 animate={{ scale: 1 }}
                 transition={{
@@ -60,7 +60,7 @@ const HeroCard = () => {
         </div>
       </div>
       <motion.div
-        className="absolute -right-6 -top-8 rotate-6 rounded-2xl bg-neutral-950 px-4 py-2 text-sm font-semibold text-white shadow-lg"
+        className="absolute -right-4 -top-6 rotate-6 rounded-2xl bg-white px-4 py-2 text-sm font-semibold text-neutral-900 shadow-lg ring-1 ring-neutral-200"
         initial={{ scale: shouldReduceMotion ? 1 : 0, rotate: 6 }}
         animate={{ scale: 1, rotate: 6 }}
         transition={{ delay: 1.8, type: "spring", stiffness: 300, damping: 12 }}

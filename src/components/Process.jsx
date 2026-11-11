@@ -58,9 +58,9 @@ const Process = () => {
             {steps.map((step, index) => (
               <li key={step.title} className="relative">
                 <FadeIn>
-                  <div className="relative flex h-14 w-14 items-center justify-center rounded-2xl bg-neutral-950 text-white">
+                  <div className="relative flex h-14 w-14 items-center justify-center rounded-2xl bg-accent-100 text-neutral-900 ring-1 ring-inset ring-accent-300">
                     <step.icon className="h-7 w-7" />
-                    <span className="absolute -right-2 -top-2 flex h-6 w-6 items-center justify-center rounded-full bg-accent-400 text-xs font-bold text-neutral-950">
+                    <span className="absolute -right-2 -top-2 flex h-6 w-6 items-center justify-center rounded-full bg-white text-xs font-bold text-neutral-900 ring-1 ring-neutral-300">
                       {index + 1}
                     </span>
                   </div>
@@ -75,7 +75,7 @@ const Process = () => {
             ))}
           </ol>
         </FadeInStagger>
-        <FadeIn className="mt-12 flex flex-col items-start gap-6 rounded-3xl bg-neutral-100 p-6 sm:flex-row sm:items-center sm:justify-between sm:p-8">
+        <FadeIn className="mt-12 flex flex-col items-start gap-6 rounded-3xl bg-neutral-50 p-6 ring-1 ring-inset ring-neutral-200 sm:flex-row sm:items-center sm:justify-between sm:p-8">
           <div className="flex items-start gap-4">
             <HiOutlineArrowsRightLeft className="mt-1 h-6 w-6 flex-none text-neutral-950" />
             <p className="text-base text-neutral-700">

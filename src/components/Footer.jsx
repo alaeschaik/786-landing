@@ -7,7 +7,7 @@ import Link from "next/link";
 import Button from "./Button";
 const NewsletterForm = () => {
   return (
-    <div className="max-w-sm rounded-3xl bg-accent-300 p-6 sm:p-8">
+    <div className="w-full max-w-md rounded-3xl bg-accent-100 p-6 sm:p-8">
       <h2 className="font-display text-lg font-semibold text-neutral-950">
         Jetzt Termin vereinbaren
       </h2>

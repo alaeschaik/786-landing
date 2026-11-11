@@ -1,19 +1,23 @@
 "use client";
 import { usePathname } from "next/navigation";
-import { useEffect, useId, useRef, useState } from "react";
-import { motion, MotionConfig, useReducedMotion } from "framer-motion";
-import Container from "./Container";
+import { useEffect, useId, useState } from "react";
+import { AnimatePresence, motion, MotionConfig, useReducedMotion } from "framer-motion";
+import clsx from "clsx";
 import Link from "next/link";
-import Logo from "./Logo";
 import { HiMenuAlt4 } from "react-icons/hi";
 import { IoMdClose } from "react-icons/io";
-import { HiOutlineCalendarDays, HiOutlinePhone } from "react-icons/hi2";
+import {
+  HiOutlineCalendarDays,
+  HiOutlineEnvelope,
+  HiOutlinePhone,
+  HiChevronRight,
+} from "react-icons/hi2";
+import Container from "./Container";
+import Logo from "./Logo";
 import Button from "./Button";
-import clsx from "clsx";
-import Offices from "./Offices";
 import Footer from "./Footer";
 
-const desktopLinks = [
+const navLinks = [
   { title: "Leistungen", href: "/services" },
   { title: "Ablauf", href: "/#ablauf" },
   { title: "Über uns", href: "/about" },
@@ -21,21 +25,21 @@ const desktopLinks = [
   { title: "Kontakt", href: "/contact" },
 ];
 
-// Always-visible call and booking actions on small screens.
+// Always-visible call and booking actions on phones.
 const MobileActionBar = () => {
   return (
-    <div className="fixed inset-x-0 bottom-0 z-40 border-t border-neutral-200 bg-white/95 p-3 backdrop-blur sm:hidden">
+    <div className="fixed inset-x-0 bottom-0 z-40 border-t border-neutral-200 bg-white/95 px-4 py-3 backdrop-blur sm:hidden">
       <div className="grid grid-cols-2 gap-3">
         <a
           href="tel:+4369915121472"
-          className="flex items-center justify-center gap-2 rounded-full px-4 py-3 text-sm font-semibold text-neutral-950 ring-2 ring-inset ring-neutral-950"
+          className="flex items-center justify-center gap-2 rounded-full bg-white px-4 py-3 text-sm font-semibold text-neutral-900 ring-1 ring-inset ring-neutral-300"
         >
           <HiOutlinePhone className="h-5 w-5" />
           Anrufen
         </a>
         <Link
           href="/appointment"
-          className="flex items-center justify-center gap-2 rounded-full bg-accent-400 px-4 py-3 text-sm font-semibold text-neutral-950"
+          className="flex items-center justify-center gap-2 rounded-full bg-accent-400 px-4 py-3 text-sm font-semibold text-neutral-900"
         >
           <HiOutlineCalendarDays className="h-5 w-5" />
           Termin buchen
@@ -45,246 +49,178 @@ const MobileActionBar = () => {
   );
 };
 
-const Header = ({
-  panelId,
-  invert = false,
-  icon: Icon,
-  expanded,
-  onToggle,
-  toggleRef,
-}) => {
-  // Container
+// Light dropdown panel for phones and tablets.
+const MobileMenu = ({ id, onClose }) => {
+  const pathname = usePathname();
   return (
-    <Container>
-      <div className="flex items-center justify-between">
-        {/* Logo */}
-        <Link href={"/"} aria-label="Home">
-          <Logo invert={invert} />
-        </Link>
-        {!invert && (
+    <>
+      <motion.div
+        className="fixed inset-0 top-[var(--header-h)] z-30 bg-neutral-900/20 backdrop-blur-sm lg:hidden"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        onClick={onClose}
+        aria-hidden="true"
+      />
+      <motion.div
+        id={id}
+        className="absolute inset-x-0 top-full z-40 lg:hidden"
+        initial={{ opacity: 0, y: -8 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -8 }}
+        transition={{ duration: 0.2 }}
+      >
+        <Container>
+          <nav className="mt-2 max-h-[calc(100dvh-var(--header-h)-1rem)] overflow-y-auto rounded-3xl border border-neutral-200 bg-white p-3 shadow-xl shadow-neutral-900/10 md:ml-auto md:max-w-md">
+            <ul role="list">
+              {navLinks.map((link) => {
+                const active = link.href === pathname;
+                return (
+                  <li key={link.href}>
+                    <Link
+                      href={link.href}
+                      onClick={onClose}
+                      className={clsx(
+                        "flex items-center justify-between rounded-2xl px-4 py-3.5 text-base font-semibold transition",
+                        active
+                          ? "bg-accent-100 text-neutral-900"
+                          : "text-neutral-800 hover:bg-neutral-50"
+                      )}
+                    >
+                      {link.title}
+                      <HiChevronRight className="h-5 w-5 text-neutral-400" />
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+            <div className="mt-3 grid gap-2 border-t border-neutral-100 px-1 pt-4">
+              <Button href="/appointment" size="lg" onClick={onClose}>
+                <HiOutlineCalendarDays className="h-5 w-5" />
+                Termin buchen
+              </Button>
+              <div className="grid grid-cols-1 gap-2 min-[380px]:grid-cols-2">
+                <Button href="tel:+4369915121472" variant="outline" size="lg">
+                  <HiOutlinePhone className="h-5 w-5" />
+                  Anrufen
+                </Button>
+                <Button href="mailto:office@786.at" variant="outline" size="lg">
+                  <HiOutlineEnvelope className="h-5 w-5" />
+                  E-Mail
+                </Button>
+              </div>
+            </div>
+            <p className="px-4 pb-2 pt-4 text-xs text-neutral-500">
+              Kalvarienberggasse 17/1, 1170 Wien · Mo–Fr 08:00–17:00
+            </p>
+          </nav>
+        </Container>
+      </motion.div>
+    </>
+  );
+};
+
+const Header = () => {
+  const panelId = useId();
+  const pathname = usePathname();
+  const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 8);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e) => e.key === "Escape" && setOpen(false);
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [open]);
+
+  return (
+    <header
+      style={{ "--header-h": "4.5rem" }}
+      className={clsx(
+        "sticky top-0 z-50 transition-[background-color,box-shadow,border-color] duration-200",
+        open
+          ? "border-b border-neutral-200 bg-white"
+          : scrolled
+            ? "border-b border-neutral-200 bg-white/90 backdrop-blur"
+            : "border-b border-transparent bg-white"
+      )}
+    >
+      <Container>
+        <div className="flex h-[4.5rem] items-center justify-between gap-6">
+          <Link href="/" aria-label="Startseite" onClick={() => setOpen(false)}>
+            <Logo />
+          </Link>
           <nav className="hidden items-center gap-x-1 lg:flex">
-            {desktopLinks.map((link) => (
+            {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="rounded-full px-4 py-2 text-sm font-semibold text-neutral-700 transition hover:bg-neutral-100 hover:text-neutral-950"
+                className={clsx(
+                  "rounded-full px-4 py-2 text-sm font-semibold transition",
+                  link.href === pathname
+                    ? "bg-accent-100 text-neutral-900"
+                    : "text-neutral-600 hover:bg-neutral-100 hover:text-neutral-900"
+                )}
               >
                 {link.title}
               </Link>
             ))}
           </nav>
-        )}
-        <div className="flex items-center gap-x-6">
-          {!invert && (
+          <div className="flex items-center gap-x-3 sm:gap-x-5">
             <a
               href="tel:+4369915121472"
-              className="hidden items-center gap-2 text-sm font-semibold text-neutral-950 hover:text-neutral-600 xl:flex"
+              className="hidden items-center gap-2 text-sm font-semibold text-neutral-700 hover:text-neutral-900 xl:flex"
             >
               <HiOutlinePhone className="h-5 w-5" />
               +43 699 15121472
             </a>
-          )}
-          <Button
-            href={"/appointment"}
-            variant={invert ? "inverted" : "accent"}
-            className="hidden sm:inline-flex"
-          >
-            Termin buchen
-          </Button>
-          <button
-            ref={toggleRef}
-            type="button"
-            onClick={onToggle}
-            aria-expanded={expanded.toString()}
-            aria-controls={panelId}
-            className={clsx(
-              "group -m-2.5 rounded-full p-2.5 transition",
-              !invert && "lg:hidden",
-              invert ? "hover:bg-white/10" : "hover:bg-neutral-950/10"
-            )}
-            aria-label="Toggle navigation"
-          >
-            <Icon
-              className={clsx(
-                "h-6 w-6",
-                invert
-                  ? "fill-white group-hover:fill-neutral-200"
-                  : "fill-neutral-950 group-hover:fill-neutral-700"
+            <Button href="/appointment" className="hidden sm:inline-flex">
+              Termin buchen
+            </Button>
+            <button
+              type="button"
+              onClick={() => setOpen((v) => !v)}
+              aria-expanded={open}
+              aria-controls={panelId}
+              aria-label={open ? "Menü schließen" : "Menü öffnen"}
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-neutral-200 bg-white text-neutral-800 transition hover:bg-neutral-50 lg:hidden"
+            >
+              {open ? (
+                <IoMdClose className="h-5 w-5" />
+              ) : (
+                <HiMenuAlt4 className="h-5 w-5" />
               )}
-            />
-          </button>
+            </button>
+          </div>
         </div>
-      </div>
-    </Container>
-  );
-};
-const NavigationRow = ({ children }) => {
-  return (
-    <div className="even:mt-px sm:bg-neutral-950">
-      <Container>
-        <div className="grid grid-cols-1 sm:grid-cols-2">{children}</div>
       </Container>
-    </div>
-  );
-};
-
-const NavigationItem = ({ href, children }) => {
-  return (
-    <Link
-      href={href}
-      className="group relative isolate -mx-6 bg-neutral-950 px-6 py-10 even:mt-px sm:mx-0 sm:px-0 sm:py-16 sm:odd:pr-16 sm:even:mt-0 sm:even:border-l sm:even:border-neutral-800 sm:even:pl-16"
-    >
-      {children}
-      <span className="absolute inset-y-0 -z-10 w-full bg-neutral-900 opacity-0 transition group-hover:opacity-100" />
-    </Link>
-  );
-};
-
-const Navigation = () => {
-  return (
-    <nav className="mt-px font-display text-3xl font-medium tracking-tight text-white sm:text-5xl">
-      <NavigationRow>
-        <NavigationItem href="/services">Leistungen</NavigationItem>
-        <NavigationItem href="/about">Über uns</NavigationItem>
-      </NavigationRow>
-      <NavigationRow>
-        <NavigationItem href="/contact">Kontakt</NavigationItem>
-        <NavigationItem href="/appointment">Termin buchen</NavigationItem>
-      </NavigationRow>
-      <NavigationRow>
-        <NavigationItem href="/#ablauf">Ablauf</NavigationItem>
-        <NavigationItem href="/#faq">FAQ</NavigationItem>
-      </NavigationRow>
-    </nav>
-  );
-};
-
-const RootLayoutInner = ({ children }) => {
-  const panelId = useId();
-  const [expanded, setExpanded] = useState(false);
-  const openRef = useRef();
-  const closeRef = useRef();
-  const navRef = useRef();
-  const shouldReduceMotion = useReducedMotion();
-  useEffect(() => {
-    function onClick(event) {
-      if (event.target.closest("a")?.href === window.location.href) {
-        setExpanded(false);
-      }
-    }
-    window.addEventListener("click", onClick);
-
-    return () => {
-      window.removeEventListener("click", onClick);
-    };
-  }, []);
-  return (
-    <MotionConfig transition={shouldReduceMotion ? { duration: 0 } : undefined}>
-      <header>
-        <div
-          className="absolute left-0 right-0 top-2 z-40 pt-14"
-          aria-hidden={expanded ? "true" : undefined}
-          inert={expanded ? true : undefined}
-        >
-          {/* Header */}
-          <Header
-            panelId={panelId}
-            icon={HiMenuAlt4}
-            toggleRef={openRef}
-            expanded={expanded}
-            onToggle={() => {
-              setExpanded((expanded) => !expanded);
-              window.setTimeout(() =>
-                closeRef.current?.focus({ preventScroll: true })
-              );
-            }}
-          />
-        </div>
-        <motion.div
-          layout
-          id={panelId}
-          style={{ height: expanded ? "auto" : "0.5rem" }}
-          className="relative z-50 overflow-hidden bg-neutral-950 pt-2"
-          aria-hidden={expanded ? undefined : "true"}
-          inert={expanded ? undefined : true}
-        >
-          <motion.div layout className="bg-neutral-800">
-            <div ref={navRef} className="bg-neutral-950 pb-16 pt-14">
-              <Header
-                invert
-                panelId={panelId}
-                icon={IoMdClose}
-                toggleRef={closeRef}
-                expanded={expanded}
-                onToggle={() => {
-                  setExpanded((expanded) => !expanded);
-                  window.setTimeout(() =>
-                    openRef.current?.focus({ preventScroll: true })
-                  );
-                }}
-              />
-            </div>
-            {/* Navigation */}
-            <Navigation />
-            <div className="relative bg-neutral-950 before:absolute before:inset-x-0 before:top-0 before:h-px before:bg-neutral-800">
-              <Container>
-                <div className="grid grid-cols-1 gap-y-10 pb-16 pt-10 sm:grid-cols-2 sm:pt-16">
-                  <div>
-                    <h2 className="font-display text-base font-semibold text-white">
-                      Unsere Kanzlei
-                    </h2>
-                    <Offices
-                      invert
-                      className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2"
-                    />
-                  </div>
-                  <div className="sm:border-l sm:border-transparent sm:pl-16">
-                    <h2 className="font-display text-base font-semibold text-white">
-                      Schnellkontakt
-                    </h2>
-                    <div className="mt-6 text-sm text-neutral-300 space-y-2">
-                      <p>
-                        Syed Tayyab Hassan Naqvi
-                        <br />
-                        <a href="tel:+4369915121472" className="hover:text-white">
-                          +43 699 15121472
-                        </a>
-                      </p>
-                      <p>
-                        <a href="mailto:office@786.at" className="hover:text-white">
-                          office@786.at
-                        </a>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </Container>
-            </div>
-          </motion.div>
-        </motion.div>
-      </header>
-      <motion.div
-        layout
-        style={{ borderTopLeftRadius: 40, borderTopRightRadius: 40 }}
-        className="relative flex flex-auto overflow-hidden bg-white pb-20 pt-14 sm:pb-0"
-      >
-        <motion.div
-          layout
-          className="relative isolate flex w-full flex-col pt-9"
-        >
-          <main className="w-full flex-auto">{children}</main>
-          {/* Footer */}
-          <Footer />
-        </motion.div>
-      </motion.div>
-      <MobileActionBar />
-    </MotionConfig>
+      <AnimatePresence>
+        {open && <MobileMenu id={panelId} onClose={() => setOpen(false)} />}
+      </AnimatePresence>
+    </header>
   );
 };
 
 const RootLayout = ({ children }) => {
-  const pathName = usePathname();
-  return <RootLayoutInner key={pathName}>{children}</RootLayoutInner>;
+  const pathname = usePathname();
+  const shouldReduceMotion = useReducedMotion();
+  return (
+    <MotionConfig transition={shouldReduceMotion ? { duration: 0 } : undefined}>
+      <Header key={pathname} />
+      <div className="flex w-full flex-auto flex-col bg-white pb-20 sm:pb-0">
+        <main className="w-full flex-auto">{children}</main>
+        <Footer />
+      </div>
+      <MobileActionBar />
+    </MotionConfig>
+  );
 };
 
 export default RootLayout;
