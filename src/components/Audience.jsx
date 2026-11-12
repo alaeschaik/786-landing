@@ -13,7 +13,7 @@ import {
 const audiences = [
   {
     title: "Ich gründe gerade",
-    description: "Gründungsberatung, Wahl der Gewinnermittlung und Förderungen.",
+    description: "Betriebswirtschaftliche Gründungsberatung, Buchhaltungs-Setup und Förderungen.",
     href: "/services#beratung",
     icon: HiOutlineRocketLaunch,
     className: "bg-rose-50 hover:bg-rose-100",

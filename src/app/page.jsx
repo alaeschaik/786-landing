@@ -15,7 +15,7 @@ import { HiCheck, HiOutlinePhone } from "react-icons/hi2";
 const highlights = [
   "Kostenloses Erstgespräch",
   "Fester Ansprechpartner",
-  "Alle Leistungen im Rahmen des BiBuG",
+  "Geprüfte Bilanzbuchhaltung nach BiBuG",
 ];
 
 const stats = [
@@ -35,7 +35,7 @@ const reasons = [
     emoji: "📚",
     title: "Aktuelle Expertise",
     description:
-      "Wir halten Sie über alle gesetzlichen Änderungen auf dem Laufenden und beraten Sie zu steuerlichen Optimierungsmöglichkeiten.",
+      "Wir halten Sie über alle gesetzlichen Änderungen auf dem Laufenden und beraten Sie zu den Auswirkungen auf Ihre Buchhaltung und Lohnverrechnung.",
   },
   {
     emoji: "🔍",

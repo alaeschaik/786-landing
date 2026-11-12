@@ -157,7 +157,7 @@ const ImpressumPage = () => {
                     Syed Tayyab Hassan Naqvi
                   </strong>
                   <br />
-                  Geschäftsführer
+                  Gewerberechtlicher Geschäftsführer
                   <br />
                   (Buchhalter, Unternehmensberatung)
                 </p>
@@ -166,9 +166,9 @@ const ImpressumPage = () => {
                     Fahad Hassan
                   </strong>
                   <br />
-                  Geschäftsführer
+                  Gewerberechtlicher Geschäftsführer
                   <br />
-                  (Büroservice)
+                  (Bilanzbuchhalter, Büroservice)
                 </p>
               </div>
             </section>
@@ -188,7 +188,9 @@ const ImpressumPage = () => {
                     <br />
                     Geschäftsführung: Syed Tayyab Hassan Naqvi
                     <br />
-                    Aufsicht: Präsident der Wirtschaftskammer Österreich
+                    Aufsicht: Präsident der Wirtschaftskammer Österreich gemäß § 63 BiBuG 2014
+                    <br />
+                    Behörde gem. ECG: Bilanzbuchhaltungsbehörde
                   </p>
                 </div>
                 <div>
@@ -207,7 +209,11 @@ const ImpressumPage = () => {
                   <p className="font-semibold text-neutral-950">3. Büroservice</p>
                   <p className="text-sm mt-1">
                     Zurverfügungstellung bürotechnischer Einrichtungen und die
-                    Durchführung von Büroarbeiten
+                    Durchführung von Büroarbeiten, eingeschränkt auf Schreibarbeiten, die
+                    Adressierung, Kuvertierung, Paketierung von Poststücken, die
+                    Durchführung von Botengängen sowie die Entgegennahme und Weitergabe
+                    von telefonischen oder im Wege anderer Kommunikationsmittel
+                    eingelangten Nachrichten
                     <br />
                     Gewerbeberechtigung seit: 19.04.2024
                     <br />
@@ -219,13 +225,13 @@ const ImpressumPage = () => {
                 <div>
                   <p className="font-semibold text-neutral-950">4. Bilanzbuchhalter</p>
                   <p className="text-sm mt-1">
-                    Bilanzbuchhaltung nach BibuG
+                    Bilanzbuchhaltung nach BiBuG
                     <br />
                     Gewerbeberechtigung seit: 10.12.2025
                     <br />
                     Gewerberechtliche Geschäftsführung: Fahad Hassan
                     <br />
-                    Spezielle Aufsichtsbehörde: Magistratisches Bezirksamt des XVII. Bezirkes
+                    Spezielle Aufsichtsbehörde: Präsident der Wirtschaftskammer Österreich gemäß § 63 BiBuG 2014
                     <br />
                     Behörde gem. ECG: Bilanzbuchhaltungsbehörde
                     <br />

@@ -79,8 +79,8 @@ const LeistungenPage = () => {
             <div id="jahresabschluss" className="scroll-mt-32">
               <ServiceHeading id="jahresabschluss" />
               <p className="mt-4 max-w-3xl text-base text-neutral-600 sm:text-lg">
-                Rechtssichere Jahresabschlüsse und Bilanzen nach österreichischem
-                Steuerrecht. Wir erstellen Ihre Abschlüsse termingerecht und
+                Jahresabschlüsse nach UGB für kleine Unternehmen sowie
+                Einnahmen-Ausgaben-Rechnungen – termingerecht und
                 nachvollziehbar.
               </p>
               <div className="mt-10">
@@ -101,13 +101,13 @@ const LeistungenPage = () => {
                     Analyse Ihrer Bilanz zur Identifikation von Stärken und
                     Verbesserungspotenzialen.
                   </GridListItem>
-                  <GridListItem title="Steuerliche Optimierung">
-                    Optimierung im Rahmen der gesetzlichen Möglichkeiten zur
-                    Minimierung Ihrer Steuerlast.
+                  <GridListItem title="Steuerliche Hinweise zum Abschluss">
+                    Beratung zu steuerlichen Fragen, die unmittelbar mit Ihrer
+                    Buchhaltung und Ihrem Abschluss zusammenhängen.
                   </GridListItem>
                   <GridListItem title="Bilanzerstellung">
-                    Bilanzen für kleine und mittlere Unternehmen nach UGB und
-                    Steuerrecht.
+                    Bilanzen für kleine Unternehmen im Rahmen der Größenmerkmale
+                    des § 221 Abs. 1 UGB.
                   </GridListItem>
                 </GridList>
               </div>
@@ -136,16 +136,20 @@ const LeistungenPage = () => {
                     Führung der Lohnkonten und Personalakten.
                   </GridListItem>
                   <GridListItem title="Behördenkommunikation">
-                    Jahreslohnzettel, ÖGK-Clearingfälle, Arbeiterkammer-Meldungen
-                    und laufende Kommunikation mit Behörden.
+                    Jahreslohnzettel, ÖGK-Clearingfälle und Meldungen zu den
+                    lohnabhängigen Abgaben.
                   </GridListItem>
                   <GridListItem title="Formulare & Muster">
                     Dienstzettel, Arbeits- und Entgeltbestätigungen,
                     Beitragskontonummer anfordern und weitere Formulare.
                   </GridListItem>
-                  <GridListItem title="Beratung Arbeitsverhältnisse">
-                    Beratung bei Gestaltung von Arbeitsverhältnissen und
-                    arbeitsrechtlichen Fragen.
+                  <GridListItem title="Beratung zur Lohnverrechnung">
+                    Beratung zu lohnverrechnungs- und sozialversicherungsrelevanten
+                    Fragen rund um Ihre Dienstverhältnisse.
+                  </GridListItem>
+                  <GridListItem title="Arbeitnehmerveranlagung">
+                    Beratung zur Arbeitnehmerveranlagung sowie Erstellung und
+                    Übermittlung der Erklärung als Bote.
                   </GridListItem>
                 </GridList>
               </div>
@@ -161,14 +165,17 @@ const LeistungenPage = () => {
               </p>
               <div className="mt-10">
                 <GridList>
-                  <GridListItem title="Beratung in Steuerfragen">
-                    Beratung in allen steuerlichen Themen im Ausmaß des BiBuG.
+                  <GridListItem title="Steuerliche Beratung">
+                    Beratung zu steuerlichen Fragen im Zusammenhang mit Buchhaltung,
+                    Bilanzierung und Lohnverrechnung (§ 2 Abs. 2 BiBuG).
                   </GridListItem>
-                  <GridListItem title="Steuerplanung">
-                    Steuergestaltung und Steuerplanung zur Senkung der Steuerbelastung.
+                  <GridListItem title="Registrierkasse & WiEReG">
+                    An- und Abmeldung von Registrierkassen sowie Meldungen zum
+                    Register der wirtschaftlichen Eigentümer.
                   </GridListItem>
-                  <GridListItem title="Förderungen & Begünstigungen">
-                    Laufende Information über Förderungen und steuerliche Begünstigungen.
+                  <GridListItem title="Förderungen">
+                    Laufende Information über Förderungen und Unterstützung bei der
+                    Antragstellung.
                   </GridListItem>
                   <GridListItem title="Sozialversicherungsberatung">
                     Beratung in Beitrags-, Versicherungs- und Leistungsangelegenheiten
@@ -180,12 +187,14 @@ const LeistungenPage = () => {
                   <GridListItem title="Unternehmensnachfolge">
                     Planung, Prozessbegleitung und Beratung bei Unternehmensnachfolge.
                   </GridListItem>
-                  <GridListItem title="Vertretung vor Behörden">
-                    Vertretung vor Abgabenbehörden, Sozialversicherungsträgern und
-                    Arbeitsmarktservice.
+                  <GridListItem title="Vertretung im Rahmen des BiBuG">
+                    Vertretung bei UVA und Zusammenfassenden Meldungen, in
+                    Lohnabgabenangelegenheiten, bei Landes- und Gemeindeabgaben,
+                    beim AMS sowie in Kammerumlagenangelegenheiten.
                   </GridListItem>
-                  <GridListItem title="Prüfungsbegleitung">
-                    Begleitung bei Betriebsprüfungen und Beitragsüberprüfungen.
+                  <GridListItem title="Lohnabgabenprüfung">
+                    Vertretung bei der gemeinsamen Prüfung lohnabhängiger Abgaben
+                    (PLB).
                   </GridListItem>
                 </GridList>
               </div>

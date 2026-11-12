@@ -45,7 +45,7 @@ const AboutPage = () => {
           </p>
           <p>
             Ob Unternehmensgründung, laufende Buchhaltung, Personalverrechnung oder
-            steuerliche Optimierung – wir verstehen Ihre Herausforderungen und entwickeln
+            Jahresabschluss – wir verstehen Ihre Herausforderungen und entwickeln
             individuelle Lösungen für Ihren Erfolg.
           </p>
         </div>

@@ -69,7 +69,7 @@ export default function StructuredData() {
           "itemOffered": {
             "@type": "Service",
             "name": "Jahresabschluss & Bilanzierung",
-            "description": "Überschussermittlung, Einnahmen-Ausgaben-Rechnung, betriebswirtschaftliche Auswertungen, Bilanzanalyse und steuerliche Optimierung."
+            "description": "Überschussermittlung, Einnahmen-Ausgaben-Rechnung, betriebswirtschaftliche Auswertungen, Bilanzanalyse und Bilanzerstellung für kleine Unternehmen nach UGB."
           }
         },
         {
@@ -77,7 +77,7 @@ export default function StructuredData() {
           "itemOffered": {
             "@type": "Service",
             "name": "Personalverrechnung",
-            "description": "Lohn- und Gehaltsberechnung, Steuerabzüge, An- und Abmeldung der Dienstnehmer, Lohnkonten und Beratung bei Gestaltung von Arbeitsverhältnissen."
+            "description": "Lohn- und Gehaltsberechnung, Steuerabzüge, An- und Abmeldung der Dienstnehmer, Lohnkonten, Arbeitnehmerveranlagung und Beratung zur Lohnverrechnung."
           }
         },
         {
@@ -85,7 +85,7 @@ export default function StructuredData() {
           "itemOffered": {
             "@type": "Service",
             "name": "Unternehmensberatung & Vertretung",
-            "description": "Beratung in steuerlichen Themen im Rahmen des BiBuG, Steuerplanung, Förderungen, Sozialversicherungsberatung, Unternehmensnachfolge und Vertretung vor Abgabenbehörden."
+            "description": "Unternehmensberatung, steuerliche Beratung im Zusammenhang mit Buchhaltung und Lohnverrechnung, Förderungen, Sozialversicherungsberatung, Unternehmensnachfolge und Vertretung im Rahmen des BiBuG."
           }
         }
       ]

@@ -27,8 +27,8 @@ export const services = [
     icon: HiOutlineDocumentChartBar,
     color: "bg-brand-100",
     description:
-      "Rechtssichere Abschlüsse und Bilanzen für KMU – termingerecht und nachvollziehbar.",
-    tags: ["Bilanz", "Bilanzanalyse", "Steueroptimierung"],
+      "Jahresabschlüsse für kleine Unternehmen nach UGB – termingerecht und nachvollziehbar.",
+    tags: ["Bilanz", "Bilanzanalyse", "E/A-Rechnung"],
   },
   {
     id: "personal",
@@ -45,8 +45,8 @@ export const services = [
     icon: HiOutlineBriefcase,
     color: "bg-rose-100",
     description:
-      "Von der Gründung bis zur Nachfolge: Beratung im Rahmen des BiBuG und Vertretung vor Behörden.",
-    tags: ["Gründung", "Förderungen", "Prüfungsbegleitung"],
+      "Von der Gründung bis zur Nachfolge: Unternehmensberatung, Sozialversicherungsberatung und Vertretung im Rahmen des BiBuG.",
+    tags: ["Gründung", "Förderungen", "Lohnabgabenprüfung"],
   },
 ];
 

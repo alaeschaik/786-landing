@@ -4,12 +4,12 @@ export const faqs = [
   {
     question: "Was ist Bilanzbuchhaltung und wer darf sie ausüben?",
     answer:
-      "Bilanzbuchhaltung umfasst die Erstellung von Jahresabschlüssen, Bilanzen und betriebswirtschaftlichen Auswertungen. In Österreich dürfen diese Tätigkeiten gemäß dem Bilanzbuchhaltungsgesetz (BiBuG) nur von geprüften Bilanzbuchhaltern ausgeübt werden. Als zugelassener Bilanzbuchhalter bieten wir alle Leistungen im Rahmen des BiBuG an.",
+      "Bilanzbuchhaltung umfasst die laufende Buchhaltung, die Lohnverrechnung und die Erstellung von Jahresabschlüssen für kleine Unternehmen. In Österreich sind diese Tätigkeiten laut Bilanzbuchhaltungsgesetz (BiBuG) Bilanzbuchhaltern vorbehalten – unbeschadet der Befugnisse von Steuerberatern und Wirtschaftsprüfern. Wir sind als Bilanzbuchhalter nach BiBuG berechtigt.",
   },
   {
     question: "Welche Buchhaltungsleistungen bietet Banoz Consultancy an?",
     answer:
-      "Wir bieten umfassende Buchhaltungsdienstleistungen: Laufende Buchhaltung (doppelte Buchführung und Einnahmen-Ausgaben-Rechnung), Jahresabschlüsse und Bilanzerstellung, Personalverrechnung mit Lohn- und Gehaltsabrechnung, Umsatzsteuervoranmeldung (UVA), sowie Unternehmensberatung und Vertretung vor Behörden.",
+      "Wir bieten: laufende Buchhaltung (doppelte Buchführung und Einnahmen-Ausgaben-Rechnung), Jahresabschlüsse für kleine Unternehmen, Personalverrechnung mit Lohn- und Gehaltsabrechnung, Umsatzsteuervoranmeldung (UVA) sowie Unternehmensberatung und Vertretung im Rahmen des BiBuG – etwa bei UVA, Lohnabgaben und Lohnabgabenprüfungen.",
   },
   {
     question: "Was kostet eine professionelle Buchhaltung in Wien?",
@@ -30,6 +30,6 @@ export const faqs = [
   {
     question: "Welche Fristen muss ich bei der Buchhaltung beachten?",
     answer:
-      "Wichtige Fristen sind: Monatliche UVA-Meldung bis zum 15. des Folgemonats, Jahresabschluss innerhalb von 9 Monaten nach dem Bilanzstichtag, Steuererklärungen je nach Zuständigkeit. Als Ihr Bilanzbuchhalter überwachen wir alle Fristen und sorgen für termingerechte Einreichungen.",
+      "Wichtige Fristen sind: die UVA bis zum 15. des zweitfolgenden Monats (bei monatlicher Abgabe), die Lohnabgaben bis zum 15. des Folgemonats und die Offenlegung des Jahresabschlusses von Kapitalgesellschaften innerhalb von 9 Monaten nach dem Bilanzstichtag. Wir behalten diese Fristen für Sie im Blick. Für Ihre Jahressteuererklärungen arbeiten wir auf Wunsch mit Ihrem Steuerberater zusammen.",
   },
 ];

@@ -28,7 +28,7 @@ const Cultures = () => {
             <GridListItem title="Vertrauen">
               Ihre Finanzdaten sind bei uns in sicheren Händen. Wir arbeiten mit
               höchster Vertraulichkeit und Integrität und sind Ihr verlässlicher
-              Partner in allen steuerlichen Angelegenheiten.
+              Partner für Buchhaltung, Bilanz und Lohnverrechnung.
             </GridListItem>
             <GridListItem title="Transparenz">
               Wir kommunizieren klar und verständlich. Sie erhalten regelmäßige

@@ -87,7 +87,7 @@ const DatenschutzPage = () => {
                   <br />
                   <strong className="font-semibold text-neutral-950">Spezielle Aufsichtsbehörde:</strong> Präsident der Wirtschaftskammer Österreich gemäß § 63 Bilanzbuchhaltungsgesetz 2014
                   <br />
-                  <strong className="font-semibold text-neutral-950">Berufszweig:</strong> Bilanzbuchhaltung nach BibuG
+                  <strong className="font-semibold text-neutral-950">Berufszweig:</strong> Bilanzbuchhaltung nach BiBuG
                   <br />
                   <strong className="font-semibold text-neutral-950">Behörde gem. ECG:</strong> Bilanzbuchhaltungsbehörde
                   <br />
