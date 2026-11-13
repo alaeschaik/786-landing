@@ -100,6 +100,17 @@ export const ServiceHeading = ({ id }) => {
   );
 };
 
+// Overview order: the two widest slots (first and last card) get the longest
+// texts, the rest are sorted by length so cards in a row have similar height.
+const serviceLength = (s) => s.title.length * 2 + s.description.length + s.tags.join(" ").length;
+const orderedServices = (() => {
+  // Layout (lg): [wide, narrow] [narrow, narrow, narrow] [narrow, wide]
+  const byLength = [...services].sort((a, b) => serviceLength(b) - serviceLength(a));
+  const [longest, second, ...rest] = byLength;
+  const [shortest, secondShortest, ...middle] = rest.reverse();
+  return [longest, shortest, ...middle, secondShortest, second];
+})();
+
 const Services = ({
   eyebrow = "Unsere Leistungen",
   title = "Alles, was Ihre Zahlen brauchen – aus einer Hand",
@@ -114,13 +125,13 @@ const Services = ({
       <Container className="mt-12 sm:mt-16">
         <FadeInStagger faster>
           <ul role="list" className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {services.map((service, index) => (
+            {orderedServices.map((service, index) => (
               <li
                 key={service.id}
                 className={clsx(
                   // 7 cards: widen first and last so every row is filled.
                   index === 0 && "lg:col-span-2",
-                  index === services.length - 1 && "sm:col-span-2"
+                  index === orderedServices.length - 1 && "sm:col-span-2"
                 )}
               >
                 <FadeIn className="h-full">

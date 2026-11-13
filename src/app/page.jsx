@@ -65,7 +65,7 @@ export default function Home() {
             </h1>
             <p className="mt-5 max-w-2xl text-lg text-neutral-600 sm:mt-6 sm:text-xl">
               Banoz Consultancy übernimmt Buchhaltung, Personalverrechnung und
-              Jahresabschluss für kleine und mittelständische Unternehmen – damit
+              Jahresabschluss für Gründer, EPU und kleine Unternehmen – damit
               Sie sich auf Ihr Geschäft konzentrieren können.
             </p>
             <div className="mt-8 flex flex-col gap-3 min-[420px]:flex-row min-[420px]:flex-wrap">

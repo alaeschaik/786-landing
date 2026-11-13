@@ -25,7 +25,7 @@ export const navigation = [
       { title: "Kontakt", href: "/contact" },
       { title: "Kooperationen", href: "/about#kooperationen" },
       { title: "Termin buchen", href: "/appointment" },
-      { title: "BMD Com Login", href: "https://banoz.786.at/bmdcom/bmdcom.dll" },
+      { title: "Kundenlogin", href: "https://banoz.786.at/bmdcom/bmdcom.dll" },
     ],
   },
   {

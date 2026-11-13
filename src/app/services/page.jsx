@@ -159,35 +159,60 @@ const LeistungenPage = () => {
             <div id="gruendung" className="scroll-mt-32">
               <ServiceHeading id="gruendung" />
               <p className="mt-4 max-w-3xl text-base text-neutral-600 sm:text-lg">
-                Der Schritt in die Selbstständigkeit wirft viele Fragen auf. Wir
-                begleiten Sie von der Idee bis zur ersten Buchung – und holen bei
-                Rechts- und Steuerfragen unsere Kooperationspartner dazu.
+                Bei der Gründung eines Unternehmens stellen sich viele Fragen. Wir
+                begleiten Sie durch alle Phasen – von der Idee bis zur ersten
+                Buchung – und holen bei Rechts- und Steuerfragen unsere
+                Kooperationspartner dazu.
               </p>
               <div className="mt-10">
                 <GridList>
-                  <GridListItem title="Gründungsberatung">
-                    Betriebswirtschaftliche Beratung zu Geschäftsmodell,
-                    Organisation und den ersten Schritten.
+                  <GridListItem title="Prüfung der Geschäftsidee">
+                    Wir prüfen Ihre Idee gemeinsam auf Umsetzbarkeit und
+                    Wirtschaftlichkeit.
                   </GridListItem>
-                  <GridListItem title="Businessplan & Finanzplan">
-                    Erstellung von Businessplan, Umsatz- und Liquiditätsplanung –
-                    auch als Grundlage für Bank und Förderstellen.
+                  <GridListItem title="Unternehmenskonzept">
+                    Gemeinsame Erarbeitung Ihres Konzepts – vom Angebot bis zur
+                    Zielgruppe.
                   </GridListItem>
-                  <GridListItem title="Förderungen">
-                    Überblick über passende Gründungsförderungen und Unterstützung
-                    bei der Antragstellung.
+                  <GridListItem title="Businessplan">
+                    Erstellung Ihres Businessplans mit Umsatz-, Kosten- und
+                    Liquiditätsplanung.
                   </GridListItem>
-                  <GridListItem title="Gewerbe & Anmeldungen">
-                    Unterstützung bei Gewerbeanmeldung, Sozialversicherung und
-                    Registrierkasse.
+                  <GridListItem title="Investitionsentscheidungen">
+                    Beratung bei Investitionen und der Ermittlung Ihres
+                    Kapitalbedarfs.
+                  </GridListItem>
+                  <GridListItem title="Wahl der Rechtsform">
+                    Betriebswirtschaftlicher Vergleich der Rechtsformen – die
+                    rechtliche und steuerliche Prüfung übernehmen unsere
+                    Kooperationspartner.
+                  </GridListItem>
+                  <GridListItem title="Gründungsförderungen">
+                    Überblick über passende Förderungen und Unterstützung bei der
+                    Antragstellung.
+                  </GridListItem>
+                  <GridListItem title="Sozialversicherung">
+                    Beratung zu Beiträgen, Versicherungspflicht und Leistungen der
+                    Sozialversicherung.
+                  </GridListItem>
+                  <GridListItem title="Bank- & Finanzierungsgespräche">
+                    Vorbereitung der Unterlagen und Unterstützung bei Gesprächen
+                    mit Ihrer Bank.
+                  </GridListItem>
+                  <GridListItem title="Steuerliche Fragen">
+                    Beratung im Zusammenhang mit Buchhaltung und Lohnverrechnung –
+                    darüber hinaus mit unserem Steuerberater.
+                  </GridListItem>
+                  <GridListItem title="Finanzamt & Sozialversicherung">
+                    Unterstützung in der Kommunikation mit Finanzamt und
+                    Sozialversicherungsträgern.
+                  </GridListItem>
+                  <GridListItem title="Registrierkasse">
+                    An- und Abmeldung Ihrer Registrierkasse.
                   </GridListItem>
                   <GridListItem title="Buchhaltungs-Setup">
                     Einrichtung von Buchhaltung, Belegablage und Lohnverrechnung
                     von Anfang an.
-                  </GridListItem>
-                  <GridListItem title="Netzwerk aus Experten">
-                    Rechtsform, Verträge und Steuerplanung klären wir gemeinsam mit
-                    unserem Rechtsanwalt und Steuerberater.
                   </GridListItem>
                 </GridList>
               </div>

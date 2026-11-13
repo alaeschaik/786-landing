@@ -1,8 +1,28 @@
+import { Children, isValidElement } from "react";
 import FadeIn, { FadeInStagger } from "./FadeIn";
 import clsx from "clsx";
+
+const textLength = (node) => {
+  if (node == null || typeof node === "boolean") return 0;
+  if (typeof node === "string" || typeof node === "number") {
+    return String(node).replace(/\s+/g, " ").trim().length;
+  }
+  if (Array.isArray(node)) return node.reduce((sum, n) => sum + textLength(n), 0);
+  if (isValidElement(node)) {
+    return textLength(node.props.title) + textLength(node.props.children);
+  }
+  return 0;
+};
+
+// Items are ordered from shortest to longest text so each row holds cards of
+// similar height and as little space as possible is left empty.
 import { HiCheck } from "react-icons/hi2";
 
-export function GridList({ className, children }) {
+export function GridList({ className, children, sortByLength = true }) {
+  const items = Children.toArray(children);
+  if (sortByLength) {
+    items.sort((a, b) => textLength(a) - textLength(b));
+  }
   return (
     <FadeInStagger faster>
       <ul
@@ -12,7 +32,7 @@ export function GridList({ className, children }) {
           className
         )}
       >
-        {children}
+        {items}
       </ul>
     </FadeInStagger>
   );

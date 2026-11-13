@@ -10,7 +10,7 @@ const Cultures = () => {
       <div className="rounded-4xl bg-neutral-50 px-6 py-12 ring-1 ring-inset ring-neutral-200 sm:px-12 sm:py-20 lg:px-16">
         <FadeIn className="max-w-2xl">
           <h2>
-            <Eyebrow className="mb-6 bg-white">
+            <Eyebrow className="mb-6">
               Unsere Werte
             </Eyebrow>
             <span className="sr-only"> - </span>

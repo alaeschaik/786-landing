@@ -106,7 +106,7 @@ const MobileMenu = ({ id, onClose }) => {
                 >
                   <span className="flex items-center gap-2">
                     <HiOutlineLockClosed className="h-5 w-5 text-neutral-500" />
-                    BMD Com Login
+                    Kundenlogin
                   </span>
                   <HiChevronRight className="h-5 w-5 text-neutral-400" />
                 </a>
@@ -196,11 +196,11 @@ const Header = () => {
               href={BMD_LOGIN_URL}
               target="_blank"
               rel="noopener noreferrer"
-              title="BMD Com Login"
+              title="Kundenlogin (BMD Com)"
               className="hidden items-center gap-1.5 rounded-full px-3 py-2 text-sm font-semibold text-neutral-600 ring-1 ring-inset ring-neutral-200 transition hover:bg-neutral-50 hover:text-neutral-900 lg:flex"
             >
               <HiOutlineLockClosed className="h-4 w-4" />
-              Login
+              Kundenlogin
             </a>
             <a
               href="tel:+436767056207"

@@ -1,16 +1,17 @@
 import clsx from "clsx";
 
-// Small pill label above headlines, shared by hero, page and section intros.
+// Small label above headlines: a short accent rule followed by spaced
+// small caps. Shared by hero, page and section intros.
 const Eyebrow = ({ children, invert = false, as: Component = "span", className }) => {
   return (
     <Component
       className={clsx(
-        "inline-flex items-center gap-2 rounded-full px-4 py-1.5 font-sans text-sm font-semibold tracking-normal",
-        invert ? "bg-white/10 text-white" : "bg-neutral-100 text-neutral-700",
+        "flex items-center gap-3 font-sans text-xs font-semibold uppercase tracking-[0.18em] sm:text-[0.8125rem]",
+        invert ? "text-neutral-300" : "text-neutral-600",
         className
       )}
     >
-      <span className="h-2 w-2 rounded-full bg-accent-400" />
+      <span aria-hidden="true" className="h-0.5 w-8 flex-none rounded-full bg-accent-400" />
       {children}
     </Component>
   );
