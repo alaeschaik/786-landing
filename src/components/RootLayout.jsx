@@ -9,6 +9,7 @@ import { IoMdClose } from "react-icons/io";
 import {
   HiOutlineCalendarDays,
   HiOutlineEnvelope,
+  HiOutlineLockClosed,
   HiOutlinePhone,
   HiChevronRight,
 } from "react-icons/hi2";
@@ -16,6 +17,8 @@ import Container from "./Container";
 import Logo from "./Logo";
 import Button from "./Button";
 import Footer from "./Footer";
+
+const BMD_LOGIN_URL = "https://banoz.786.at/bmdcom/bmdcom.dll";
 
 const navLinks = [
   { title: "Leistungen", href: "/services" },
@@ -93,6 +96,21 @@ const MobileMenu = ({ id, onClose }) => {
                   </li>
                 );
               })}
+              <li>
+                <a
+                  href={BMD_LOGIN_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={onClose}
+                  className="flex items-center justify-between rounded-2xl px-4 py-3.5 text-base font-semibold text-neutral-800 transition hover:bg-neutral-50"
+                >
+                  <span className="flex items-center gap-2">
+                    <HiOutlineLockClosed className="h-5 w-5 text-neutral-500" />
+                    BMD Com Login
+                  </span>
+                  <HiChevronRight className="h-5 w-5 text-neutral-400" />
+                </a>
+              </li>
             </ul>
             <div className="mt-3 grid gap-2 border-t border-neutral-100 px-1 pt-4">
               <Button href="/appointment" size="lg" onClick={onClose}>
@@ -173,7 +191,17 @@ const Header = () => {
               </Link>
             ))}
           </nav>
-          <div className="flex items-center gap-x-3 sm:gap-x-5">
+          <div className="flex items-center gap-x-3 sm:gap-x-4">
+            <a
+              href={BMD_LOGIN_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              title="BMD Com Login"
+              className="hidden items-center gap-1.5 rounded-full px-3 py-2 text-sm font-semibold text-neutral-600 ring-1 ring-inset ring-neutral-200 transition hover:bg-neutral-50 hover:text-neutral-900 lg:flex"
+            >
+              <HiOutlineLockClosed className="h-4 w-4" />
+              Login
+            </a>
             <a
               href="tel:+4369915121472"
               className="hidden items-center gap-2 text-sm font-semibold text-neutral-700 hover:text-neutral-900 xl:flex"

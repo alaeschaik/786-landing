@@ -163,7 +163,7 @@ const ImpressumPage = () => {
                 </p>
                 <p>
                   <strong className="font-semibold text-neutral-950">
-                    Fahad Hassan
+                    Fahad Hassan, BPr
                   </strong>
                   <br />
                   Gewerberechtlicher Geschäftsführer
@@ -217,7 +217,7 @@ const ImpressumPage = () => {
                     <br />
                     Gewerbeberechtigung seit: 19.04.2024
                     <br />
-                    Geschäftsführung: Fahad Hassan
+                    Geschäftsführung: Fahad Hassan, BPr
                     <br />
                     GISA-Zahl: 37084486
                   </p>
@@ -229,7 +229,7 @@ const ImpressumPage = () => {
                     <br />
                     Gewerbeberechtigung seit: 10.12.2025
                     <br />
-                    Gewerberechtliche Geschäftsführung: Fahad Hassan
+                    Gewerberechtliche Geschäftsführung: Fahad Hassan, BPr
                     <br />
                     Spezielle Aufsichtsbehörde: Präsident der Wirtschaftskammer Österreich gemäß § 63 BiBuG 2014
                     <br />

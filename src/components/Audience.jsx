@@ -14,7 +14,7 @@ const audiences = [
   {
     title: "Ich gründe gerade",
     description: "Betriebswirtschaftliche Gründungsberatung, Buchhaltungs-Setup und Förderungen.",
-    href: "/services#beratung",
+    href: "/services#gruendung",
     icon: HiOutlineRocketLaunch,
     className: "bg-rose-50 hover:bg-rose-100",
   },

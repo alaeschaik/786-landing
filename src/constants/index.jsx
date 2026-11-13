@@ -5,6 +5,8 @@ export const navigation = [
       { title: "Buchhaltung", href: "/services#buchhaltung" },
       { title: "Jahresabschluss", href: "/services#jahresabschluss" },
       { title: "Personalverrechnung", href: "/services#personal" },
+      { title: "Gründung", href: "/services#gruendung" },
+      { title: "Büroservice", href: "/services#bueroservice" },
       { title: "Unternehmensberatung", href: "/services#beratung" },
       {
         title: (
@@ -21,7 +23,9 @@ export const navigation = [
     links: [
       { title: "Über uns", href: "/about" },
       { title: "Kontakt", href: "/contact" },
+      { title: "Kooperationen", href: "/about#kooperationen" },
       { title: "Termin buchen", href: "/appointment" },
+      { title: "BMD Com Login", href: "https://banoz.786.at/bmdcom/bmdcom.dll" },
     ],
   },
   {

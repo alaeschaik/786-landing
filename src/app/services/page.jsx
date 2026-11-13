@@ -155,6 +155,103 @@ const LeistungenPage = () => {
               </div>
             </div>
 
+            {/* Gründung Details */}
+            <div id="gruendung" className="scroll-mt-32">
+              <ServiceHeading id="gruendung" />
+              <p className="mt-4 max-w-3xl text-base text-neutral-600 sm:text-lg">
+                Der Schritt in die Selbstständigkeit wirft viele Fragen auf. Wir
+                begleiten Sie von der Idee bis zur ersten Buchung – und holen bei
+                Rechts- und Steuerfragen unsere Kooperationspartner dazu.
+              </p>
+              <div className="mt-10">
+                <GridList>
+                  <GridListItem title="Gründungsberatung">
+                    Betriebswirtschaftliche Beratung zu Geschäftsmodell,
+                    Organisation und den ersten Schritten.
+                  </GridListItem>
+                  <GridListItem title="Businessplan & Finanzplan">
+                    Erstellung von Businessplan, Umsatz- und Liquiditätsplanung –
+                    auch als Grundlage für Bank und Förderstellen.
+                  </GridListItem>
+                  <GridListItem title="Förderungen">
+                    Überblick über passende Gründungsförderungen und Unterstützung
+                    bei der Antragstellung.
+                  </GridListItem>
+                  <GridListItem title="Gewerbe & Anmeldungen">
+                    Unterstützung bei Gewerbeanmeldung, Sozialversicherung und
+                    Registrierkasse.
+                  </GridListItem>
+                  <GridListItem title="Buchhaltungs-Setup">
+                    Einrichtung von Buchhaltung, Belegablage und Lohnverrechnung
+                    von Anfang an.
+                  </GridListItem>
+                  <GridListItem title="Netzwerk aus Experten">
+                    Rechtsform, Verträge und Steuerplanung klären wir gemeinsam mit
+                    unserem Rechtsanwalt und Steuerberater.
+                  </GridListItem>
+                </GridList>
+              </div>
+            </div>
+
+            {/* Behördliche Schriftstücke Details */}
+            <div id="schriftstuecke" className="scroll-mt-32">
+              <ServiceHeading id="schriftstuecke" />
+              <p className="mt-4 max-w-3xl text-base text-neutral-600 sm:text-lg">
+                Behördenpost ist oft schwer verständlich und an Fristen gebunden.
+                Wir nehmen Ihnen diese Arbeit ab.
+              </p>
+              <div className="mt-10">
+                <GridList>
+                  <GridListItem title="Sichten & erklären">
+                    Wir prüfen Schreiben von Finanzamt, ÖGK, Magistrat oder AMS
+                    und erklären, was zu tun ist.
+                  </GridListItem>
+                  <GridListItem title="Fristen im Blick">
+                    Wir erfassen alle Fristen und erinnern Sie rechtzeitig.
+                  </GridListItem>
+                  <GridListItem title="Erledigung">
+                    Beantwortung und Erledigung im Rahmen unserer Berechtigungen –
+                    etwa zu UVA, Lohnabgaben oder Sozialversicherung.
+                  </GridListItem>
+                  <GridListItem title="Formulare & Anträge">
+                    Ausfüllen von Formularen und Anträgen für Behörden.
+                  </GridListItem>
+                  <GridListItem title="Weiterleitung an Partner">
+                    Rechtliche oder steuerliche Verfahren übergeben wir an unsere
+                    Kooperationspartner.
+                  </GridListItem>
+                </GridList>
+              </div>
+            </div>
+
+            {/* Büroservice Details */}
+            <div id="bueroservice" className="scroll-mt-32">
+              <ServiceHeading id="bueroservice" />
+              <p className="mt-4 max-w-3xl text-base text-neutral-600 sm:text-lg">
+                Wir übernehmen die Büroarbeiten, die Zeit kosten – damit Sie sich
+                auf Ihr Geschäft konzentrieren können.
+              </p>
+              <div className="mt-10">
+                <GridList>
+                  <GridListItem title="Schreibarbeiten">
+                    Erstellung und Reinschrift von Briefen, Listen und Dokumenten.
+                  </GridListItem>
+                  <GridListItem title="Postversand">
+                    Adressierung, Kuvertierung und Paketierung Ihrer Poststücke.
+                  </GridListItem>
+                  <GridListItem title="Botengänge">
+                    Zustellung und Abholung von Unterlagen.
+                  </GridListItem>
+                  <GridListItem title="Telefon- & Nachrichtenservice">
+                    Entgegennahme und Weitergabe von Anrufen und Nachrichten.
+                  </GridListItem>
+                  <GridListItem title="Büroinfrastruktur">
+                    Zurverfügungstellung bürotechnischer Einrichtungen.
+                  </GridListItem>
+                </GridList>
+              </div>
+            </div>
+
             {/* Unternehmensberatung Details */}
             <div id="beratung" className="scroll-mt-32">
               <ServiceHeading id="beratung" />

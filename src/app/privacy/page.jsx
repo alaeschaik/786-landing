@@ -83,7 +83,7 @@ const DatenschutzPage = () => {
                 <p className="mt-4">
                   <strong className="font-semibold text-neutral-950">Gewerbewortlaut:</strong> Bilanzbuchhalter
                   <br />
-                  <strong className="font-semibold text-neutral-950">Gewerberechtliche Geschäftsführung:</strong> Fahad Hassan
+                  <strong className="font-semibold text-neutral-950">Gewerberechtliche Geschäftsführung:</strong> Fahad Hassan, BPr
                   <br />
                   <strong className="font-semibold text-neutral-950">Spezielle Aufsichtsbehörde:</strong> Präsident der Wirtschaftskammer Österreich gemäß § 63 Bilanzbuchhaltungsgesetz 2014
                   <br />

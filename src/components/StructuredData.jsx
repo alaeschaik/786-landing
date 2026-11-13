@@ -84,6 +84,30 @@ export default function StructuredData() {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
+            "name": "Gründung",
+            "description": "Betriebswirtschaftliche Gründungsberatung, Businessplan und Finanzplanung, Förderungen, Unterstützung bei Anmeldungen und Einrichtung der Buchhaltung."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Behördliche Schriftstücke",
+            "description": "Sichtung, Erklärung und Erledigung behördlicher Schreiben im Rahmen unserer Berechtigungen, Fristenüberwachung sowie Formulare und Anträge."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Büroservice",
+            "description": "Schreibarbeiten, Adressierung, Kuvertierung und Paketierung von Poststücken, Botengänge sowie Telefon- und Nachrichtenservice."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
             "name": "Unternehmensberatung & Vertretung",
             "description": "Unternehmensberatung, steuerliche Beratung im Zusammenhang mit Buchhaltung und Lohnverrechnung, Förderungen, Sozialversicherungsberatung, Unternehmensnachfolge und Vertretung im Rahmen des BiBuG."
           }

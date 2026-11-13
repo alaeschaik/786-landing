@@ -4,6 +4,7 @@ import Cultures from "@/components/Cultures";
 import FadeIn from "@/components/FadeIn";
 import Highlight from "@/components/Highlight";
 import PageIntro from "@/components/PageIntro";
+import Partners from "@/components/Partners";
 import { StatList, StatListItem } from "@/components/StatList";
 import React from "react";
 
@@ -17,7 +18,7 @@ export const metadata = {
 
 const team = [
   { name: "Syed Tayyab Hassan Naqvi", initials: "TN" },
-  { name: "Syed Fahad Hassan Naqvi", initials: "FN" },
+  { name: "Fahad Hassan, BPr", initials: "FH" },
 ];
 
 const AboutPage = () => {
@@ -92,6 +93,7 @@ const AboutPage = () => {
       </Container>
 
       <Cultures />
+      <Partners />
       <ContactSection />
     </>
   );

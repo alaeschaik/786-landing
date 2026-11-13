@@ -7,6 +7,7 @@ import Eyebrow from "@/components/Eyebrow";
 import Faq from "@/components/Faq";
 import HeroCard from "@/components/HeroCard";
 import Highlight from "@/components/Highlight";
+import Partners from "@/components/Partners";
 import Process from "@/components/Process";
 import Services from "@/components/Services";
 import { StatList, StatListItem } from "@/components/StatList";
@@ -138,6 +139,8 @@ export default function Home() {
           </div>
         </FadeIn>
       </Container>
+
+      <Partners />
 
       <Faq />
 

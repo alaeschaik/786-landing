@@ -9,7 +9,7 @@ export const faqs = [
   {
     question: "Welche Buchhaltungsleistungen bietet Banoz Consultancy an?",
     answer:
-      "Wir bieten: laufende Buchhaltung (doppelte Buchführung und Einnahmen-Ausgaben-Rechnung), Jahresabschlüsse für kleine Unternehmen, Personalverrechnung mit Lohn- und Gehaltsabrechnung, Umsatzsteuervoranmeldung (UVA) sowie Unternehmensberatung und Vertretung im Rahmen des BiBuG – etwa bei UVA, Lohnabgaben und Lohnabgabenprüfungen.",
+      "Wir bieten: laufende Buchhaltung (doppelte Buchführung und Einnahmen-Ausgaben-Rechnung), Jahresabschlüsse für kleine Unternehmen, Personalverrechnung mit Lohn- und Gehaltsabrechnung, Umsatzsteuervoranmeldung (UVA), Gründungsberatung, die Bearbeitung behördlicher Schriftstücke, Büroservice sowie Unternehmensberatung und Vertretung im Rahmen des BiBuG – etwa bei UVA, Lohnabgaben und Lohnabgabenprüfungen.",
   },
   {
     question: "Was kostet eine professionelle Buchhaltung in Wien?",
@@ -30,6 +30,6 @@ export const faqs = [
   {
     question: "Welche Fristen muss ich bei der Buchhaltung beachten?",
     answer:
-      "Wichtige Fristen sind: die UVA bis zum 15. des zweitfolgenden Monats (bei monatlicher Abgabe), die Lohnabgaben bis zum 15. des Folgemonats und die Offenlegung des Jahresabschlusses von Kapitalgesellschaften innerhalb von 9 Monaten nach dem Bilanzstichtag. Wir behalten diese Fristen für Sie im Blick. Für Ihre Jahressteuererklärungen arbeiten wir auf Wunsch mit Ihrem Steuerberater zusammen.",
+      "Wichtige Fristen sind: die UVA bis zum 15. des zweitfolgenden Monats (bei monatlicher Abgabe), die Lohnabgaben bis zum 15. des Folgemonats und die Offenlegung des Jahresabschlusses von Kapitalgesellschaften innerhalb von 9 Monaten nach dem Bilanzstichtag. Wir behalten diese Fristen für Sie im Blick. Für Ihre Jahressteuererklärungen arbeiten wir mit unserem Kooperationspartner Steuerberater Mag. Kai Herbst oder Ihrem eigenen Steuerberater zusammen.",
   },
 ];

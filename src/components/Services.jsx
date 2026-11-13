@@ -8,6 +8,9 @@ import {
   HiOutlineBriefcase,
   HiOutlineCalculator,
   HiOutlineDocumentChartBar,
+  HiOutlineEnvelopeOpen,
+  HiOutlinePrinter,
+  HiOutlineRocketLaunch,
   HiOutlineUsers,
 } from "react-icons/hi2";
 
@@ -40,13 +43,40 @@ export const services = [
     tags: ["Löhne & Gehälter", "An-/Abmeldung", "Lohnkonten"],
   },
   {
+    id: "gruendung",
+    title: "Gründung",
+    icon: HiOutlineRocketLaunch,
+    color: "bg-orange-100",
+    description:
+      "Vom Businessplan bis zur ersten Buchung: Wir begleiten Sie Schritt für Schritt in die Selbstständigkeit.",
+    tags: ["Businessplan", "Förderungen", "Buchhaltungs-Setup"],
+  },
+  {
+    id: "schriftstuecke",
+    title: "Behördliche Schriftstücke",
+    icon: HiOutlineEnvelopeOpen,
+    color: "bg-sky-100",
+    description:
+      "Post vom Finanzamt, der ÖGK oder dem Magistrat? Wir sichten, erklären und erledigen sie für Sie.",
+    tags: ["Finanzamt", "ÖGK", "Fristen"],
+  },
+  {
+    id: "bueroservice",
+    title: "Büroservice",
+    icon: HiOutlinePrinter,
+    color: "bg-violet-100",
+    description:
+      "Schreibarbeiten, Postversand, Botengänge und Telefonservice – wir entlasten Ihr Büro.",
+    tags: ["Schreibarbeiten", "Post", "Telefonservice"],
+  },
+  {
     id: "beratung",
     title: "Unternehmensberatung & Vertretung",
     icon: HiOutlineBriefcase,
     color: "bg-rose-100",
     description:
-      "Von der Gründung bis zur Nachfolge: Unternehmensberatung, Sozialversicherungsberatung und Vertretung im Rahmen des BiBuG.",
-    tags: ["Gründung", "Förderungen", "Lohnabgabenprüfung"],
+      "Vom Wachstum bis zur Nachfolge: Unternehmensberatung, Sozialversicherungsberatung und Vertretung im Rahmen des BiBuG.",
+    tags: ["Organisation", "Nachfolge", "Lohnabgabenprüfung"],
   },
 ];
 
@@ -83,9 +113,16 @@ const Services = ({
       </SectionIntro>
       <Container className="mt-12 sm:mt-16">
         <FadeInStagger faster>
-          <ul role="list" className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-            {services.map((service) => (
-              <li key={service.id}>
+          <ul role="list" className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {services.map((service, index) => (
+              <li
+                key={service.id}
+                className={clsx(
+                  // 7 cards: widen first and last so every row is filled.
+                  index === 0 && "lg:col-span-2",
+                  index === services.length - 1 && "sm:col-span-2"
+                )}
+              >
                 <FadeIn className="h-full">
                   <Link
                     href={`/services#${service.id}`}
