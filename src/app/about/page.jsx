@@ -54,7 +54,7 @@ const AboutPage = () => {
       <Container className="mt-16 sm:mt-20">
         <StatList>
           <StatListItem value="10+" label="Jahre Erfahrung" />
-          <StatListItem value="100+" label="Betreute Unternehmen" />
+          <StatListItem value="200+" label="Betreute Unternehmen" />
           <StatListItem value="5" label="Fachbereiche" />
         </StatList>
       </Container>

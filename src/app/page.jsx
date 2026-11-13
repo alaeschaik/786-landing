@@ -21,7 +21,7 @@ const highlights = [
 
 const stats = [
   { value: "10+", label: "Jahre Erfahrung" },
-  { value: "100+", label: "Zufriedene Kunden" },
+  { value: "200+", label: "Zufriedene Kunden" },
   { value: "5", label: "Fachbereiche" },
 ];
 
