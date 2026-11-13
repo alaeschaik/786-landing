@@ -32,7 +32,7 @@ export const navigation = [
     title: "Kontakt",
     links: [
       { title: "office@786.at", href: "mailto:office@786.at" },
-      { title: "+43 699 15121472", href: "tel:+4369915121472" },
+      { title: "+43 676 7056207", href: "tel:+436767056207" },
       { title: "Kalvarienberggasse 17/1, 1170 Wien", href: "https://maps.google.com/?q=Kalvarienberggasse+17/1+1170+Wien" },
     ],
   },

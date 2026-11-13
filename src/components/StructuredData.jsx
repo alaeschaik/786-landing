@@ -10,7 +10,7 @@ export default function StructuredData() {
     "url": "https://786.at",
     "logo": "https://786.at/logo.svg",
     "description": "Professionelle Bilanzbuchhaltung, Jahresabschlüsse und Beratung in Wien. Ihr zuverlässiger Partner für Buchhaltung, Personalverrechnung und Unternehmensberatung im Rahmen des BiBuG.",
-    "telephone": "+4369915121472",
+    "telephone": "+436767056207",
     "email": "office@786.at",
     "address": {
       "@type": "PostalAddress",

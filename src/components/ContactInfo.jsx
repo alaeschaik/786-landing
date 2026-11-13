@@ -13,7 +13,7 @@ const channels = [
     icon: HiOutlinePhone,
     color: "bg-accent-200",
     lines: ["Syed Tayyab Hassan Naqvi"],
-    link: { href: "tel:+4369915121472", label: "+43 699 15121472" },
+    link: { href: "tel:+436767056207", label: "+43 676 7056207" },
   },
   {
     title: "E-Mail",

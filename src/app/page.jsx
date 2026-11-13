@@ -72,9 +72,9 @@ export default function Home() {
               <Button href="/appointment" variant="accent" size="lg">
                 Kostenloses Erstgespräch
               </Button>
-              <Button href="tel:+4369915121472" variant="outline" size="lg">
+              <Button href="tel:+436767056207" variant="outline" size="lg">
                 <HiOutlinePhone className="h-5 w-5" />
-                +43 699 15121472
+                +43 676 7056207
               </Button>
             </div>
             <ul role="list" className="mt-8 flex flex-wrap gap-x-6 gap-y-3">

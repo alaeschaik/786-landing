@@ -23,8 +23,8 @@ const ContactSection = () => {
             <Button href={"/contact"} variant="outline" size="lg">
               Kontakt aufnehmen
             </Button>
-            <Button href="tel:+4369915121472" variant="outline" size="lg">
-              +43 699 15121472
+            <Button href="tel:+436767056207" variant="outline" size="lg">
+              +43 676 7056207
             </Button>
           </div>
           <div className="mt-10 border-t border-accent-300/60 pt-10">

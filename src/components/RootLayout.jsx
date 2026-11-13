@@ -34,7 +34,7 @@ const MobileActionBar = () => {
     <div className="fixed inset-x-0 bottom-0 z-40 border-t border-neutral-200 bg-white/95 px-4 py-3 backdrop-blur sm:hidden">
       <div className="grid grid-cols-2 gap-3">
         <a
-          href="tel:+4369915121472"
+          href="tel:+436767056207"
           className="flex items-center justify-center gap-2 rounded-full bg-white px-4 py-3 text-sm font-semibold text-neutral-900 ring-1 ring-inset ring-neutral-300"
         >
           <HiOutlinePhone className="h-5 w-5" />
@@ -118,7 +118,7 @@ const MobileMenu = ({ id, onClose }) => {
                 Termin buchen
               </Button>
               <div className="grid grid-cols-1 gap-2 min-[380px]:grid-cols-2">
-                <Button href="tel:+4369915121472" variant="outline" size="lg">
+                <Button href="tel:+436767056207" variant="outline" size="lg">
                   <HiOutlinePhone className="h-5 w-5" />
                   Anrufen
                 </Button>
@@ -203,11 +203,11 @@ const Header = () => {
               Login
             </a>
             <a
-              href="tel:+4369915121472"
+              href="tel:+436767056207"
               className="hidden items-center gap-2 text-sm font-semibold text-neutral-700 hover:text-neutral-900 xl:flex"
             >
               <HiOutlinePhone className="h-5 w-5" />
-              +43 699 15121472
+              +43 676 7056207
             </a>
             <Button href="/appointment" className="hidden sm:inline-flex">
               Termin buchen

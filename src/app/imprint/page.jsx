@@ -82,10 +82,10 @@ const ImpressumPage = () => {
                     Telefon:
                   </strong>{" "}
                   <a
-                    href="tel:+4369915121472"
+                    href="tel:+436767056207"
                     className="text-neutral-950 hover:text-neutral-600"
                   >
-                    +43 699 15121472
+                    +43 676 7056207
                   </a>
                 </p>
                 <p>

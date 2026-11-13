@@ -6,7 +6,7 @@ import PageIntro from "@/components/PageIntro";
 
 export const metadata = {
   title: "Kontakt",
-  description: "Kontaktieren Sie Banoz Consultancy in Wien. Kalvarienberggasse 17/1, 1170 Wien. Tel: +43 699 15121472, E-Mail: office@786.at. Kostenlose Erstberatung.",
+  description: "Kontaktieren Sie Banoz Consultancy in Wien. Kalvarienberggasse 17/1, 1170 Wien. Tel: +43 676 7056207, E-Mail: office@786.at. Kostenlose Erstberatung.",
   alternates: {
     canonical: "/contact",
   },

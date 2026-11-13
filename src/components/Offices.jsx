@@ -29,8 +29,8 @@ const Offices = ({ invert = false, ...props }) => {
           <br />
           Syed Tayyab Hassan Naqvi
           <br />
-          <a href="tel:+4369915121472" className={invert ? "text-white hover:text-neutral-300" : "text-neutral-950 hover:text-neutral-700"}>
-            +43 699 15121472
+          <a href="tel:+436767056207" className={invert ? "text-white hover:text-neutral-300" : "text-neutral-950 hover:text-neutral-700"}>
+            +43 676 7056207
           </a>
           <br />
           <a href="mailto:office@786.at" className={invert ? "text-white hover:text-neutral-300" : "text-neutral-950 hover:text-neutral-700"}>
