@@ -9,7 +9,13 @@ const textLength = (node) => {
   }
   if (Array.isArray(node)) return node.reduce((sum, n) => sum + textLength(n), 0);
   if (isValidElement(node)) {
-    return textLength(node.props.title) + textLength(node.props.children);
+    // <T de en /> nodes are measured by their German text so the order stays
+    // the same in both languages.
+    return (
+      textLength(node.props.title) +
+      textLength(node.props.children) +
+      textLength(node.props.de)
+    );
   }
   return 0;
 };

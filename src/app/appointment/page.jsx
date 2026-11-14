@@ -4,6 +4,7 @@ import FadeIn from "@/components/FadeIn";
 import AppointmentForm from "@/components/AppointmentForm";
 import ContactInfo from "@/components/ContactInfo";
 import Highlight from "@/components/Highlight";
+import { T } from "@/i18n/LanguageProvider";
 
 export const metadata = {
   title: "Termin buchen",
@@ -17,12 +18,19 @@ const TerminPage = () => {
   return (
     <>
       <PageIntro
-        eyebrow="Terminvereinbarung"
-        title={<>Vereinbaren Sie jetzt Ihr <Highlight>kostenloses</Highlight> Erstgespräch</>}
+        eyebrow={<T de="Terminvereinbarung" en="Book a meeting" />}
+        title={
+          <T
+            de={<>Vereinbaren Sie jetzt Ihr <Highlight>kostenloses</Highlight> Erstgespräch</>}
+            en={<>Book your <Highlight>free</Highlight> initial consultation now</>}
+          />
+        }
       >
         <p>
-          Nutzen Sie unser Kontaktformular, um einen Termin zu vereinbaren. Wir melden
-          uns zeitnah bei Ihnen, um einen passenden Termin zu finden.
+          <T
+            de="Nutzen Sie unser Kontaktformular, um einen Termin zu vereinbaren. Wir melden uns zeitnah bei Ihnen, um einen passenden Termin zu finden."
+            en="Use our form to request a meeting. We will get back to you promptly to find a time that suits you."
+          />
         </p>
       </PageIntro>
 
@@ -35,11 +43,13 @@ const TerminPage = () => {
           <div>
             <FadeIn>
               <h2 className="font-display text-2xl font-semibold text-neutral-950">
-                Lieber direkt anrufen?
+                <T de="Lieber direkt anrufen?" en="Prefer to call?" />
               </h2>
               <p className="mt-4 text-base text-neutral-600">
-                Kein Problem! Rufen Sie uns an und vereinbaren Sie telefonisch einen
-                Termin. Wir sind während unserer Öffnungszeiten gerne für Sie da.
+                <T
+                  de="Kein Problem! Rufen Sie uns an und vereinbaren Sie telefonisch einen Termin. Wir sind während unserer Öffnungszeiten gerne für Sie da."
+                  en="No problem! Give us a call and book a meeting by phone. We are happy to help during our opening hours."
+                />
               </p>
             </FadeIn>
             <ContactInfo className="mt-8" />

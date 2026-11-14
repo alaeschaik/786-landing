@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "email:preview": "node scripts/preview-emails.mjs"
   },
   "dependencies": {
     "autoprefixer": "10.4.15",

@@ -7,6 +7,12 @@ COPY package*.json ./
 RUN if [ -f package-lock.json ]; then npm ci; else npm install; fi
 
 COPY . .
+# Contact form email delivery (see docs/EMAIL_SETUP.md); pass with --build-arg
+ARG NEXT_PUBLIC_EMAILJS_SERVICE_ID
+ARG NEXT_PUBLIC_EMAILJS_TEMPLATE_ID
+ARG NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+ARG NEXT_PUBLIC_EMAILJS_SEND_CONFIRMATION
+ARG NEXT_PUBLIC_CONTACT_EMAIL
 RUN npm run build
 
 # Serve the generated files with nginx

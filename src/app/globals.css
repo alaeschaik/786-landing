@@ -21,3 +21,8 @@ dt {
     font-variation-settings: "wdth" 100;
   }
 }
+
+/* Set by the inline script in layout.jsx while English text is being applied. */
+html.lang-pending body {
+  visibility: hidden;
+}

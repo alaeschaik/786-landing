@@ -3,6 +3,7 @@ import ContactForm from "@/components/ContactForm";
 import Container from "@/components/Container";
 import Highlight from "@/components/Highlight";
 import PageIntro from "@/components/PageIntro";
+import { T } from "@/i18n/LanguageProvider";
 
 export const metadata = {
   title: "Kontakt",
@@ -15,10 +16,20 @@ export const metadata = {
 const ContactPage = () => {
   return (
     <>
-      <PageIntro eyebrow="Kontakt" title={<>Lassen Sie uns <Highlight>sprechen</Highlight></>}>
+      <PageIntro
+        eyebrow={<T de="Kontakt" en="Contact" />}
+        title={
+          <T
+            de={<>Lassen Sie uns <Highlight>sprechen</Highlight></>}
+            en={<>Let&apos;s <Highlight>talk</Highlight></>}
+          />
+        }
+      >
         <p>
-          Vereinbaren Sie ein kostenloses Erstgespräch. Wir freuen uns darauf,
-          Sie und Ihr Unternehmen kennenzulernen.
+          <T
+            de="Vereinbaren Sie ein kostenloses Erstgespräch. Wir freuen uns darauf, Sie und Ihr Unternehmen kennenzulernen."
+            en="Book a free initial consultation. We look forward to getting to know you and your business."
+          />
         </p>
       </PageIntro>
       <Container className="mt-16 sm:mt-20">

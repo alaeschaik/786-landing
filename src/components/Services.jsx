@@ -13,70 +13,99 @@ import {
   HiOutlineRocketLaunch,
   HiOutlineUsers,
 } from "react-icons/hi2";
+import { T } from "@/i18n/LanguageProvider";
 
 export const services = [
   {
     id: "buchhaltung",
     title: "Buchhaltung",
+    titleEn: "Bookkeeping",
     icon: HiOutlineCalculator,
     color: "bg-accent-200",
     description:
       "Laufende Verbuchung aller Geschäftsfälle – doppelt oder als Einnahmen-Ausgaben-Rechnung.",
+    descriptionEn:
+      "Ongoing recording of all business transactions – double-entry or cash-basis accounting.",
     tags: ["UVA", "E/A-Rechnung", "Saldenlisten", "Kostenrechnung"],
+    tagsEn: ["VAT returns", "Cash-basis accounts", "Trial balances", "Cost accounting"],
   },
   {
     id: "jahresabschluss",
     title: "Jahresabschluss & Bilanzierung",
+    titleEn: "Annual accounts & balance sheets",
     icon: HiOutlineDocumentChartBar,
     color: "bg-brand-100",
     description:
       "Jahresabschlüsse für kleine Unternehmen nach UGB – termingerecht und nachvollziehbar.",
+    descriptionEn:
+      "Annual accounts for small businesses under the Austrian Commercial Code (UGB) – on time and easy to follow.",
     tags: ["Bilanz", "Bilanzanalyse", "E/A-Rechnung"],
+    tagsEn: ["Balance sheet", "Balance sheet analysis", "Cash-basis accounts"],
   },
   {
     id: "personal",
     title: "Personalverrechnung",
+    titleEn: "Payroll",
     icon: HiOutlineUsers,
     color: "bg-emerald-100",
     description:
       "Korrekte Lohn- und Gehaltsabrechnung inklusive aller Meldungen an ÖGK und Finanzamt.",
+    descriptionEn:
+      "Accurate wage and salary payroll including all filings with the ÖGK and the tax office.",
     tags: ["Löhne & Gehälter", "An-/Abmeldung", "Lohnkonten"],
+    tagsEn: ["Wages & salaries", "Registration / deregistration", "Payroll accounts"],
   },
   {
     id: "gruendung",
     title: "Gründung",
+    titleEn: "Business formation",
     icon: HiOutlineRocketLaunch,
     color: "bg-orange-100",
     description:
       "Vom Businessplan bis zur ersten Buchung: Wir begleiten Sie Schritt für Schritt in die Selbstständigkeit.",
+    descriptionEn:
+      "From business plan to first booking: we guide you step by step into self-employment.",
     tags: ["Businessplan", "Förderungen", "Buchhaltungs-Setup"],
+    tagsEn: ["Business plan", "Funding", "Bookkeeping set-up"],
   },
   {
     id: "schriftstuecke",
     title: "Behördliche Schriftstücke",
+    titleEn: "Official correspondence",
     icon: HiOutlineEnvelopeOpen,
     color: "bg-sky-100",
     description:
       "Post vom Finanzamt, der ÖGK oder dem Magistrat? Wir sichten, erklären und erledigen sie für Sie.",
+    descriptionEn:
+      "Letters from the tax office, the ÖGK or the municipal authority? We review, explain and handle them for you.",
     tags: ["Finanzamt", "ÖGK", "Fristen"],
+    tagsEn: ["Tax office", "ÖGK", "Deadlines"],
   },
   {
     id: "bueroservice",
     title: "Büroservice",
+    titleEn: "Office services",
     icon: HiOutlinePrinter,
     color: "bg-violet-100",
     description:
       "Schreibarbeiten, Postversand, Botengänge und Telefonservice – wir entlasten Ihr Büro.",
+    descriptionEn:
+      "Typing, mailing, errands and telephone service – we take the load off your office.",
     tags: ["Schreibarbeiten", "Post", "Telefonservice"],
+    tagsEn: ["Typing", "Mail", "Telephone service"],
   },
   {
     id: "beratung",
     title: "Unternehmensberatung & Vertretung",
+    titleEn: "Business consulting & representation",
     icon: HiOutlineBriefcase,
     color: "bg-rose-100",
     description:
       "Vom Wachstum bis zur Nachfolge: Unternehmensberatung, Sozialversicherungsberatung und Vertretung im Rahmen des BiBuG.",
+    descriptionEn:
+      "From growth to succession: business consulting, social insurance advice and representation within the scope of the BiBuG.",
     tags: ["Organisation", "Nachfolge", "Lohnabgabenprüfung"],
+    tagsEn: ["Organisation", "Succession", "Payroll tax audits"],
   },
 ];
 
@@ -94,7 +123,7 @@ export const ServiceHeading = ({ id }) => {
         <service.icon className="h-7 w-7 text-neutral-950" />
       </span>
       <h2 className="min-w-0 font-display text-2xl font-medium tracking-tight text-neutral-950 sm:text-4xl">
-        {service.title}
+        <T de={service.title} en={service.titleEn} />
       </h2>
     </div>
   );
@@ -112,9 +141,19 @@ const orderedServices = (() => {
 })();
 
 const Services = ({
-  eyebrow = "Unsere Leistungen",
-  title = "Alles, was Ihre Zahlen brauchen – aus einer Hand",
-  intro = "Von der laufenden Buchhaltung über Jahresabschlüsse bis zur strategischen Beratung. Wählen Sie einen Bereich für alle Details.",
+  eyebrow = <T de="Unsere Leistungen" en="Our services" />,
+  title = (
+    <T
+      de="Alles, was Ihre Zahlen brauchen – aus einer Hand"
+      en="Everything your numbers need – from a single source"
+    />
+  ),
+  intro = (
+    <T
+      de="Von der laufenden Buchhaltung über Jahresabschlüsse bis zur strategischen Beratung. Wählen Sie einen Bereich für alle Details."
+      en="From ongoing bookkeeping and annual accounts to strategic advice. Choose an area for all the details."
+    />
+  ),
   className = "mt-24 sm:mt-32 lg:mt-40",
 }) => {
   return (
@@ -148,23 +187,23 @@ const Services = ({
                       <service.icon className="h-7 w-7 text-neutral-950" />
                     </span>
                     <h3 className="mt-5 font-display text-xl font-semibold text-neutral-950 sm:mt-6 sm:text-2xl">
-                      {service.title}
+                      <T de={service.title} en={service.titleEn} />
                     </h3>
                     <p className="mt-3 text-base text-neutral-600">
-                      {service.description}
+                      <T de={service.description} en={service.descriptionEn} />
                     </p>
                     <ul role="list" className="mt-6 flex flex-wrap gap-2">
-                      {service.tags.map((tag) => (
+                      {service.tags.map((tag, tagIndex) => (
                         <li
                           key={tag}
                           className="rounded-full bg-neutral-100 px-3 py-1 text-xs font-medium text-neutral-700"
                         >
-                          {tag}
+                          <T de={tag} en={service.tagsEn?.[tagIndex]} />
                         </li>
                       ))}
                     </ul>
                     <span className="mt-auto inline-flex items-center gap-2 pt-8 text-sm font-semibold text-neutral-950">
-                      Details ansehen
+                      <T de="Details ansehen" en="View details" />
                       <HiArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
                     </span>
                   </Link>

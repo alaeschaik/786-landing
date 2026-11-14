@@ -1,5 +1,6 @@
 import RootLayout from "@/components/RootLayout";
 import StructuredData from "@/components/StructuredData";
+import { LanguageProvider } from "@/i18n/LanguageProvider";
 import "./globals.css";
 
 export const metadata = {
@@ -80,13 +81,23 @@ export default function Layout({ children }) {
   return (
     <html
       lang="de-AT"
+      suppressHydrationWarning
       className="h-full overflow-x-hidden bg-white text-base antialiased text-neutral-900"
     >
       <head>
+        {/* Hide the German static HTML for visitors who chose English until React
+            has swapped the text, with a timeout so the page can never stay hidden. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `try{if(localStorage.getItem("lang")==="en"){var d=document.documentElement;d.classList.add("lang-pending");d.lang="en";setTimeout(function(){d.classList.remove("lang-pending")},1500)}}catch(e){}`,
+          }}
+        />
         <StructuredData />
       </head>
       <body className="flex min-h-full flex-col">
-        <RootLayout>{children}</RootLayout>
+        <LanguageProvider>
+          <RootLayout>{children}</RootLayout>
+        </LanguageProvider>
       </body>
     </html>
   );

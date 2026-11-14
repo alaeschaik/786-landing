@@ -9,30 +9,43 @@ import {
   HiOutlineInboxArrowDown,
   HiOutlineShieldCheck,
 } from "react-icons/hi2";
+import { T } from "@/i18n/LanguageProvider";
 
 const steps = [
   {
     title: "Kostenloses Erstgespräch",
+    titleEn: "Free initial consultation",
     description:
       "Wir lernen Ihr Unternehmen kennen und klären, was Sie wirklich brauchen.",
+    descriptionEn:
+      "We get to know your business and work out what you really need.",
     icon: HiOutlineChatBubbleLeftRight,
   },
   {
     title: "Individuelles Angebot",
+    titleEn: "Tailored quote",
     description:
       "Sie erhalten ein klares Angebot, abgestimmt auf Umfang und Belegmenge.",
+    descriptionEn:
+      "You receive a clear quote based on scope and the number of receipts.",
     icon: HiOutlineDocumentText,
   },
   {
     title: "Belege übergeben",
+    titleEn: "Hand over your receipts",
     description:
       "Digital oder persönlich – ganz wie es für Sie am einfachsten ist.",
+    descriptionEn:
+      "Digitally or in person – whatever is easiest for you.",
     icon: HiOutlineInboxArrowDown,
   },
   {
     title: "Entspannt zurücklehnen",
+    titleEn: "Sit back and relax",
     description:
       "Wir verbuchen, werten aus und behalten alle Fristen für Sie im Blick.",
+    descriptionEn:
+      "We book, report and keep track of every deadline for you.",
     icon: HiOutlineShieldCheck,
   },
 ];
@@ -41,8 +54,13 @@ const Process = () => {
   return (
     <section id="ablauf" className="scroll-mt-24">
       <SectionIntro
-        eyebrow="So funktioniert's"
-        title="In vier Schritten zur entspannten Buchhaltung"
+        eyebrow={<T de="So funktioniert's" en="How it works" />}
+        title={
+          <T
+            de="In vier Schritten zur entspannten Buchhaltung"
+            en="Stress-free bookkeeping in four steps"
+          />
+        }
         className="mt-24 sm:mt-32 lg:mt-40"
       />
       <Container className="mt-12 sm:mt-16">
@@ -65,10 +83,10 @@ const Process = () => {
                     </span>
                   </div>
                   <h3 className="mt-6 font-display text-lg font-semibold text-neutral-950">
-                    {step.title}
+                    <T de={step.title} en={step.titleEn} />
                   </h3>
                   <p className="mt-2 text-base text-neutral-600">
-                    {step.description}
+                    <T de={step.description} en={step.descriptionEn} />
                   </p>
                 </FadeIn>
               </li>
@@ -80,13 +98,19 @@ const Process = () => {
             <HiOutlineArrowsRightLeft className="mt-1 h-6 w-6 flex-none text-neutral-950" />
             <p className="text-base text-neutral-700">
               <strong className="font-semibold text-neutral-950">
-                Sie möchten Ihren Buchhalter wechseln?
+                <T
+                  de="Sie möchten Ihren Buchhalter wechseln?"
+                  en="Looking to switch accountants?"
+                />
               </strong>{" "}
-              Sprechen Sie uns an – wir besprechen die Übergabe gemeinsam.
+              <T
+                de="Sprechen Sie uns an – wir besprechen die Übergabe gemeinsam."
+                en="Talk to us – we'll plan the handover together."
+              />
             </p>
           </div>
           <Button href="/appointment" size="lg" className="flex-none">
-            Wechsel besprechen
+            <T de="Wechsel besprechen" en="Discuss switching" />
           </Button>
         </FadeIn>
       </Container>

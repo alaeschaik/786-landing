@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import { T } from "@/i18n/LanguageProvider";
 
 function Office({ name, children, invert = false }) {
   return (
@@ -21,10 +22,10 @@ const Offices = ({ invert = false, ...props }) => {
   return (
     <ul role="list" {...props}>
       <li>
-        <Office name="Wien" invert={invert}>
+        <Office name={<T de="Wien" en="Vienna" />} invert={invert}>
           Kalvarienberggasse 17/1
           <br />
-          1170 Wien
+          <T de="1170 Wien" en="1170 Vienna" />
           <br />
           <br />
           Syed Tayyab Hassan Naqvi
@@ -39,12 +40,12 @@ const Offices = ({ invert = false, ...props }) => {
         </Office>
       </li>
       <li>
-        <Office name="Öffnungszeiten" invert={invert}>
-          Montag - Freitag: 08:00 - 17:00
+        <Office name={<T de="Öffnungszeiten" en="Opening hours" />} invert={invert}>
+          <T de="Montag - Freitag: 08:00 - 17:00" en="Monday - Friday: 08:00 - 17:00" />
           <br />
-          Samstag: Geschlossen
+          <T de="Samstag: Geschlossen" en="Saturday: Closed" />
           <br />
-          Sonntag: Geschlossen
+          <T de="Sonntag: Geschlossen" en="Sunday: Closed" />
         </Office>
       </li>
     </ul>
