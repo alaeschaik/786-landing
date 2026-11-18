@@ -2,13 +2,17 @@ import { HiArrowUpRight, HiOutlineCalculator, HiOutlineScale } from "react-icons
 import Container from "./Container";
 import FadeIn, { FadeInStagger } from "./FadeIn";
 import SectionIntro from "./SectionIntro";
+import { T } from "@/i18n/LanguageProvider";
 
 const partners = [
   {
     name: "Mag. Galanda",
     role: "Rechtsanwalt",
+    roleEn: "Lawyer",
     description:
       "Für alle rechtlichen Fragen – von Verträgen und Rechtsformwahl bis zur Vertretung vor Gericht.",
+    descriptionEn:
+      "For all legal questions – from contracts and choosing a legal form to representation in court.",
     href: "https://www.ra-galanda.at",
     domain: "ra-galanda.at",
     icon: HiOutlineScale,
@@ -17,8 +21,11 @@ const partners = [
   {
     name: "Mag. Kai Herbst",
     role: "Steuerberater",
+    roleEn: "Tax adviser",
     description:
       "Für Steuererklärungen, Steuerplanung und die Vertretung vor dem Finanzamt.",
+    descriptionEn:
+      "For tax returns, tax planning and representation before the tax office.",
     href: "https://www.steuerberatung-herbst.at",
     domain: "steuerberatung-herbst.at",
     icon: HiOutlineCalculator,
@@ -30,14 +37,20 @@ const Partners = ({ className = "mt-24 sm:mt-32 lg:mt-40" }) => {
   return (
     <section id="kooperationen" className="scroll-mt-24">
       <SectionIntro
-        eyebrow="Kooperationen"
-        title="Starke Partner für alles darüber hinaus"
+        eyebrow={<T de="Kooperationen" en="Partnerships" />}
+        title={
+          <T
+            de="Starke Partner für alles darüber hinaus"
+            en="Strong partners for everything beyond"
+          />
+        }
         className={className}
       >
         <p>
-          Für Rechts- und Steuerfragen außerhalb der Bilanzbuchhaltung arbeiten
-          wir eng mit erfahrenen Partnern zusammen – Sie haben trotzdem nur
-          einen Ansprechpartner.
+          <T
+            de="Für Rechts- und Steuerfragen außerhalb der Bilanzbuchhaltung arbeiten wir eng mit erfahrenen Partnern zusammen – Sie haben trotzdem nur einen Ansprechpartner."
+            en="For legal and tax matters beyond accountancy we work closely with experienced partners – and you still have just one point of contact."
+          />
         </p>
       </SectionIntro>
       <Container className="mt-10 sm:mt-12">
@@ -63,12 +76,12 @@ const Partners = ({ className = "mt-24 sm:mt-32 lg:mt-40" }) => {
                           {partner.name}
                         </h3>
                         <p className="text-sm font-medium text-neutral-500">
-                          {partner.role}
+                          <T de={partner.role} en={partner.roleEn} />
                         </p>
                       </div>
                     </div>
                     <p className="mt-5 text-base text-neutral-600">
-                      {partner.description}
+                      <T de={partner.description} en={partner.descriptionEn} />
                     </p>
                     <span className="mt-auto inline-flex items-center gap-1.5 pt-6 text-sm font-semibold text-neutral-950">
                       {partner.domain}

@@ -5,22 +5,25 @@ import FooterNavigation from "./FooterNavigation";
 import Logo from "./Logo";
 import Link from "next/link";
 import Button from "./Button";
+import { T } from "@/i18n/LanguageProvider";
 const NewsletterForm = () => {
   return (
     <div className="w-full max-w-md rounded-3xl bg-accent-100 p-6 sm:p-8">
       <h2 className="font-display text-lg font-semibold text-neutral-950">
-        Jetzt Termin vereinbaren
+        <T de="Jetzt Termin vereinbaren" en="Book a meeting now" />
       </h2>
       <p className="mt-3 text-sm text-neutral-800">
-        Kontaktieren Sie uns für ein kostenloses Erstgespräch und erfahren Sie,
-        wie wir Ihr Unternehmen optimal betreuen können.
+        <T
+          de="Kontaktieren Sie uns für ein kostenloses Erstgespräch und erfahren Sie, wie wir Ihr Unternehmen optimal betreuen können."
+          en="Get in touch for a free initial consultation and find out how we can best support your business."
+        />
       </p>
       <div className="mt-6 flex flex-col gap-3">
         <Button href="/appointment" size="lg">
-          Termin buchen
+          <T de="Termin buchen" en="Book a meeting" />
         </Button>
         <Button href="/contact" variant="outline" size="lg">
-          Kontakt aufnehmen
+          <T de="Kontakt aufnehmen" en="Get in touch" />
         </Button>
       </div>
     </div>
@@ -48,14 +51,14 @@ const Footer = () => {
                   href="/imprint"
                   className="hover:text-neutral-950 transition"
                 >
-                  Impressum
+                  <T de="Impressum" en="Imprint" />
                 </Link>
                 <span>|</span>
                 <Link
                   href="/privacy"
                   className="hover:text-neutral-950 transition"
                 >
-                  Datenschutz
+                  <T de="Datenschutz" en="Privacy" />
                 </Link>
               </div>
               <p className="text-sm text-neutral-700">

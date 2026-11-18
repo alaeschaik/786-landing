@@ -1,39 +1,40 @@
+// Footer navigation; each label carries its German (default) and English text.
 export const navigation = [
   {
-    title: "Leistungen",
+    de: "Leistungen",
+    en: "Services",
     links: [
-      { title: "Buchhaltung", href: "/services#buchhaltung" },
-      { title: "Jahresabschluss", href: "/services#jahresabschluss" },
-      { title: "Personalverrechnung", href: "/services#personal" },
-      { title: "Gründung", href: "/services#gruendung" },
-      { title: "Büroservice", href: "/services#bueroservice" },
-      { title: "Unternehmensberatung", href: "/services#beratung" },
+      { de: "Buchhaltung", en: "Bookkeeping", href: "/services#buchhaltung" },
+      { de: "Jahresabschluss", en: "Annual accounts", href: "/services#jahresabschluss" },
+      { de: "Personalverrechnung", en: "Payroll", href: "/services#personal" },
+      { de: "Gründung", en: "Business formation", href: "/services#gruendung" },
+      { de: "Büroservice", en: "Office services", href: "/services#bueroservice" },
+      { de: "Unternehmensberatung", en: "Business consulting", href: "/services#beratung" },
+      { de: "Alle Leistungen", en: "All services", href: "/services", arrow: true },
+    ],
+  },
+  {
+    de: "Unternehmen",
+    en: "Company",
+    links: [
+      { de: "Über uns", en: "About us", href: "/about" },
+      { de: "Kontakt", en: "Contact", href: "/contact" },
+      { de: "Kooperationen", en: "Partnerships", href: "/about#kooperationen" },
+      { de: "Termin buchen", en: "Book a meeting", href: "/appointment" },
+      { de: "Kundenlogin", en: "Client login", href: "https://banoz.786.at/bmdcom/bmdcom.dll" },
+    ],
+  },
+  {
+    de: "Kontakt",
+    en: "Contact",
+    links: [
+      { de: "office@786.at", href: "mailto:office@786.at" },
+      { de: "+43 676 7056207", href: "tel:+436767056207" },
       {
-        title: (
-          <>
-            Alle Leistungen <span aria-hidden="true">&rarr;</span>
-          </>
-        ),
-        href: "/services",
+        de: "Kalvarienberggasse 17/1, 1170 Wien",
+        en: "Kalvarienberggasse 17/1, 1170 Vienna",
+        href: "https://maps.google.com/?q=Kalvarienberggasse+17/1+1170+Wien",
       },
-    ],
-  },
-  {
-    title: "Unternehmen",
-    links: [
-      { title: "Über uns", href: "/about" },
-      { title: "Kontakt", href: "/contact" },
-      { title: "Kooperationen", href: "/about#kooperationen" },
-      { title: "Termin buchen", href: "/appointment" },
-      { title: "Kundenlogin", href: "https://banoz.786.at/bmdcom/bmdcom.dll" },
-    ],
-  },
-  {
-    title: "Kontakt",
-    links: [
-      { title: "office@786.at", href: "mailto:office@786.at" },
-      { title: "+43 676 7056207", href: "tel:+436767056207" },
-      { title: "Kalvarienberggasse 17/1, 1170 Wien", href: "https://maps.google.com/?q=Kalvarienberggasse+17/1+1170+Wien" },
     ],
   },
 ];

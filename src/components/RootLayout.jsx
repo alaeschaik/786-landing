@@ -17,19 +17,59 @@ import Container from "./Container";
 import Logo from "./Logo";
 import Button from "./Button";
 import Footer from "./Footer";
+import { useLanguage, useT } from "@/i18n/LanguageProvider";
 
 const BMD_LOGIN_URL = "https://banoz.786.at/bmdcom/bmdcom.dll";
 
 const navLinks = [
-  { title: "Leistungen", href: "/services" },
-  { title: "Ablauf", href: "/#ablauf" },
-  { title: "Über uns", href: "/about" },
-  { title: "FAQ", href: "/#faq" },
-  { title: "Kontakt", href: "/contact" },
+  { de: "Leistungen", en: "Services", href: "/services" },
+  { de: "Ablauf", en: "Process", href: "/#ablauf" },
+  { de: "Über uns", en: "About us", href: "/about" },
+  { de: "FAQ", en: "FAQ", href: "/#faq" },
+  { de: "Kontakt", en: "Contact", href: "/contact" },
 ];
+
+// Segmented DE | EN toggle.
+const LanguageSwitcher = ({ className }) => {
+  const { lang, setLang } = useLanguage();
+  const t = useT();
+  return (
+    <div
+      role="group"
+      aria-label={t("Sprache wählen", "Choose language")}
+      className={clsx(
+        "flex items-center rounded-full p-0.5 text-xs font-semibold ring-1 ring-inset ring-neutral-200",
+        className
+      )}
+    >
+      {[
+        { code: "de", label: "DE", name: "Deutsch" },
+        { code: "en", label: "EN", name: "English" },
+      ].map((option) => (
+        <button
+          key={option.code}
+          type="button"
+          lang={option.code}
+          onClick={() => setLang(option.code)}
+          aria-pressed={lang === option.code}
+          title={option.name}
+          className={clsx(
+            "rounded-full px-2.5 py-1.5 transition",
+            lang === option.code
+              ? "bg-neutral-900 text-white"
+              : "text-neutral-600 hover:text-neutral-900"
+          )}
+        >
+          {option.label}
+        </button>
+      ))}
+    </div>
+  );
+};
 
 // Always-visible call and booking actions on phones.
 const MobileActionBar = () => {
+  const t = useT();
   return (
     <div className="fixed inset-x-0 bottom-0 z-40 border-t border-neutral-200 bg-white/95 px-4 py-3 backdrop-blur sm:hidden">
       <div className="grid grid-cols-2 gap-3">
@@ -38,14 +78,14 @@ const MobileActionBar = () => {
           className="flex items-center justify-center gap-2 rounded-full bg-white px-4 py-3 text-sm font-semibold text-neutral-900 ring-1 ring-inset ring-neutral-300"
         >
           <HiOutlinePhone className="h-5 w-5" />
-          Anrufen
+          {t("Anrufen", "Call")}
         </a>
         <Link
           href="/appointment"
           className="flex items-center justify-center gap-2 rounded-full bg-accent-400 px-4 py-3 text-sm font-semibold text-neutral-900"
         >
           <HiOutlineCalendarDays className="h-5 w-5" />
-          Termin buchen
+          {t("Termin buchen", "Book a meeting")}
         </Link>
       </div>
     </div>
@@ -55,6 +95,7 @@ const MobileActionBar = () => {
 // Light dropdown panel for phones and tablets.
 const MobileMenu = ({ id, onClose }) => {
   const pathname = usePathname();
+  const t = useT();
   return (
     <>
       <motion.div
@@ -90,7 +131,7 @@ const MobileMenu = ({ id, onClose }) => {
                           : "text-neutral-800 hover:bg-neutral-50"
                       )}
                     >
-                      {link.title}
+                      {t(link.de, link.en)}
                       <HiChevronRight className="h-5 w-5 text-neutral-400" />
                     </Link>
                   </li>
@@ -106,7 +147,7 @@ const MobileMenu = ({ id, onClose }) => {
                 >
                   <span className="flex items-center gap-2">
                     <HiOutlineLockClosed className="h-5 w-5 text-neutral-500" />
-                    Kundenlogin
+                    {t("Kundenlogin", "Client login")}
                   </span>
                   <HiChevronRight className="h-5 w-5 text-neutral-400" />
                 </a>
@@ -115,22 +156,28 @@ const MobileMenu = ({ id, onClose }) => {
             <div className="mt-3 grid gap-2 border-t border-neutral-100 px-1 pt-4">
               <Button href="/appointment" size="lg" onClick={onClose}>
                 <HiOutlineCalendarDays className="h-5 w-5" />
-                Termin buchen
+                {t("Termin buchen", "Book a meeting")}
               </Button>
               <div className="grid grid-cols-1 gap-2 min-[380px]:grid-cols-2">
                 <Button href="tel:+436767056207" variant="outline" size="lg">
                   <HiOutlinePhone className="h-5 w-5" />
-                  Anrufen
+                  {t("Anrufen", "Call")}
                 </Button>
                 <Button href="mailto:office@786.at" variant="outline" size="lg">
                   <HiOutlineEnvelope className="h-5 w-5" />
-                  E-Mail
+                  {t("E-Mail", "Email")}
                 </Button>
               </div>
             </div>
-            <p className="px-4 pb-2 pt-4 text-xs text-neutral-500">
-              Kalvarienberggasse 17/1, 1170 Wien · Mo–Fr 08:00–17:00
-            </p>
+            <div className="flex items-center justify-between gap-3 px-4 pb-2 pt-4">
+              <p className="text-xs text-neutral-500">
+                {t(
+                  "Kalvarienberggasse 17/1, 1170 Wien · Mo–Fr 08:00–17:00",
+                  "Kalvarienberggasse 17/1, 1170 Vienna · Mon–Fri 08:00–17:00"
+                )}
+              </p>
+              <LanguageSwitcher className="flex-none" />
+            </div>
           </nav>
         </Container>
       </motion.div>
@@ -142,6 +189,7 @@ const Header = () => {
   const panelId = useId();
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const t = useT();
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -172,7 +220,7 @@ const Header = () => {
     >
       <Container>
         <div className="flex h-[4.5rem] items-center justify-between gap-6">
-          <Link href="/" aria-label="Startseite" onClick={() => setOpen(false)}>
+          <Link href="/" aria-label={t("Startseite", "Home")} onClick={() => setOpen(false)}>
             <Logo />
           </Link>
           <nav className="hidden items-center gap-x-1 lg:flex">
@@ -187,20 +235,21 @@ const Header = () => {
                     : "text-neutral-600 hover:bg-neutral-100 hover:text-neutral-900"
                 )}
               >
-                {link.title}
+                {t(link.de, link.en)}
               </Link>
             ))}
           </nav>
           <div className="flex items-center gap-x-3 sm:gap-x-4">
+            <LanguageSwitcher className="hidden sm:flex" />
             <a
               href={BMD_LOGIN_URL}
               target="_blank"
               rel="noopener noreferrer"
-              title="Kundenlogin (BMD Com)"
+              title={t("Kundenlogin (BMD Com)", "Client login (BMD Com)")}
               className="hidden items-center gap-1.5 rounded-full px-3 py-2 text-sm font-semibold text-neutral-600 ring-1 ring-inset ring-neutral-200 transition hover:bg-neutral-50 hover:text-neutral-900 lg:flex"
             >
               <HiOutlineLockClosed className="h-4 w-4" />
-              Kundenlogin
+              {t("Kundenlogin", "Client login")}
             </a>
             <a
               href="tel:+436767056207"
@@ -210,14 +259,18 @@ const Header = () => {
               +43 676 7056207
             </a>
             <Button href="/appointment" className="hidden sm:inline-flex">
-              Termin buchen
+              {t("Termin buchen", "Book a meeting")}
             </Button>
             <button
               type="button"
               onClick={() => setOpen((v) => !v)}
               aria-expanded={open}
               aria-controls={panelId}
-              aria-label={open ? "Menü schließen" : "Menü öffnen"}
+              aria-label={
+                open
+                  ? t("Menü schließen", "Close menu")
+                  : t("Menü öffnen", "Open menu")
+              }
               className="flex h-11 w-11 items-center justify-center rounded-full border border-neutral-200 bg-white text-neutral-800 transition hover:bg-neutral-50 lg:hidden"
             >
               {open ? (
