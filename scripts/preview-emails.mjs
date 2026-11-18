@@ -16,7 +16,7 @@ const sample = {
       "Guten Tag,\n\nwir gründen gerade eine GmbH und suchen Unterstützung bei Buchhaltung und Lohnverrechnung für drei Mitarbeiter.\n\nLiebe Grüße\nMaria Muster",
   },
   service: { de: "Personalverrechnung", en: "Payroll" },
-  timeSlot: { de: "Vormittag (8-12 Uhr)", en: "Morning (8am–12pm)" },
+  timeSlot: { de: "Vormittag (9-12 Uhr)", en: "Morning (9am–12pm)" },
 };
 
 const outDir = new URL("../email-previews/", import.meta.url);

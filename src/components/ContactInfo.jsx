@@ -46,12 +46,12 @@ const channels = [
     icon: HiOutlineClock,
     color: "bg-emerald-100",
     lines: [
-      "Montag - Freitag: 08:00 - 17:00",
+      "Montag - Freitag: 09:00 - 17:00",
       "Samstag & Sonntag: Geschlossen",
       "Termine außerhalb nach Vereinbarung",
     ],
     linesEn: [
-      "Monday - Friday: 08:00 - 17:00",
+      "Monday - Friday: 09:00 - 17:00",
       "Saturday & Sunday: Closed",
       "Other times by appointment",
     ],

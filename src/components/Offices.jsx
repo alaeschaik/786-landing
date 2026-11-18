@@ -41,7 +41,7 @@ const Offices = ({ invert = false, ...props }) => {
       </li>
       <li>
         <Office name={<T de="Öffnungszeiten" en="Opening hours" />} invert={invert}>
-          <T de="Montag - Freitag: 08:00 - 17:00" en="Monday - Friday: 08:00 - 17:00" />
+          <T de="Montag - Freitag: 09:00 - 17:00" en="Monday - Friday: 09:00 - 17:00" />
           <br />
           <T de="Samstag: Geschlossen" en="Saturday: Closed" />
           <br />

@@ -35,7 +35,7 @@ const nextSteps = [
 ];
 
 const timeSlotOptions = [
-  { value: "vormittag", de: "Vormittag (8-12 Uhr)", en: "Morning (8am–12pm)" },
+  { value: "vormittag", de: "Vormittag (9-12 Uhr)", en: "Morning (9am–12pm)" },
   { value: "nachmittag", de: "Nachmittag (12-17 Uhr)", en: "Afternoon (12–5pm)" },
   { value: "flexibel", de: "Flexibel", en: "Flexible" },
 ];

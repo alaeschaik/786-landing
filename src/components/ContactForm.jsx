@@ -20,8 +20,17 @@ const serviceOptions = [
   { value: "jahresabschluss", de: "Jahresabschluss", en: "Annual accounts" },
   { value: "personal", de: "Personalverrechnung", en: "Payroll" },
   { value: "beratung", de: "Unternehmensberatung", en: "Business consulting" },
-  { value: "mehrere", de: "Mehrere Bereiche", en: "Several areas" },
 ];
+
+// Several topics can be ticked; the email lists them comma-separated.
+function selectedServices(data) {
+  const chosen = serviceOptions.filter((o) => data.getAll("service").includes(o.value));
+  if (!chosen.length) return undefined;
+  return {
+    de: chosen.map((o) => o.de).join(", "),
+    en: chosen.map((o) => o.en).join(", "),
+  };
+}
 
 const field = (data, name) => String(data.get(name) || "").trim();
 
@@ -33,7 +42,7 @@ const buildEnquiry = (data) => ({
     phone: field(data, "phone"),
     message: field(data, "message"),
   },
-  service: serviceOptions.find((o) => o.value === data.get("service")),
+  service: selectedServices(data),
 });
 
 const ContactForm = () => {
@@ -98,12 +107,16 @@ const ContactForm = () => {
           <div className="border border-neutral-300 bg-white px-6 py-8 first:rounded-t-2xl last:rounded-b-2xl">
             <fieldset>
               <legend className="text-base/6 text-neutral-500">
-                {t("Welche Leistung interessiert Sie?", "Which service are you interested in?")}
+                {t("Welche Leistungen interessieren Sie?", "Which services are you interested in?")}
+                <span className="ml-1 text-sm text-neutral-400">
+                  {t("(Mehrfachauswahl möglich)", "(select all that apply)")}
+                </span>
               </legend>
               <div className="mt-4 flex flex-wrap gap-2">
                 {serviceOptions.map((option) => (
                   <RadioInput
                     key={option.value}
+                    type="checkbox"
                     label={t(option.de, option.en)}
                     name="service"
                     value={option.value}
