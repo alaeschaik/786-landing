@@ -45,7 +45,7 @@ export const metadata = {
     description: "Professionelle Bilanzbuchhaltung, Jahresabschlüsse und Beratung im Rahmen des BiBuG in Wien.",
     images: [
       {
-        url: "/agency.PNG",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "Banoz Consultancy",
@@ -56,7 +56,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Banoz Consultancy - Bilanzbuchhaltung in Wien",
     description: "Professionelle Bilanzbuchhaltung, Jahresabschlüsse und Beratung im Rahmen des BiBuG in Wien.",
-    images: ["/agency.PNG"],
+    images: ["/og-image.png"],
   },
   robots: {
     index: true,
