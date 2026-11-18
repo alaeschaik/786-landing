@@ -172,8 +172,8 @@ const MobileMenu = ({ id, onClose }) => {
             <div className="flex items-center justify-between gap-3 px-4 pb-2 pt-4">
               <p className="text-xs text-neutral-500">
                 {t(
-                  "Kalvarienberggasse 17/1, 1170 Wien · Mo–Fr 08:00–17:00",
-                  "Kalvarienberggasse 17/1, 1170 Vienna · Mon–Fri 08:00–17:00"
+                  "Kalvarienberggasse 17/1, 1170 Wien · Mo–Fr 09:00–17:00",
+                  "Kalvarienberggasse 17/1, 1170 Vienna · Mon–Fri 09:00–17:00"
                 )}
               </p>
               <LanguageSwitcher className="flex-none" />
