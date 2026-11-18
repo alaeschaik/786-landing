@@ -10,6 +10,7 @@ import {
   PrivacyNote,
   SubmitButton,
   SuccessPanel,
+  selectedOptions,
   useEnquirySubmit,
 } from "./EnquiryFeedback";
 import { useT } from "@/i18n/LanguageProvider";
@@ -22,15 +23,6 @@ const serviceOptions = [
   { value: "beratung", de: "Unternehmensberatung", en: "Business consulting" },
 ];
 
-// Several topics can be ticked; the email lists them comma-separated.
-function selectedServices(data) {
-  const chosen = serviceOptions.filter((o) => data.getAll("service").includes(o.value));
-  if (!chosen.length) return undefined;
-  return {
-    de: chosen.map((o) => o.de).join(", "),
-    en: chosen.map((o) => o.en).join(", "),
-  };
-}
 
 const field = (data, name) => String(data.get(name) || "").trim();
 
@@ -42,7 +34,7 @@ const buildEnquiry = (data) => ({
     phone: field(data, "phone"),
     message: field(data, "message"),
   },
-  service: selectedServices(data),
+  service: selectedOptions(serviceOptions, data, "service"),
 });
 
 const ContactForm = () => {
