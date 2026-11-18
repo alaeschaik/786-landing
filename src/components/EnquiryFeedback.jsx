@@ -8,6 +8,18 @@ import Button from "./Button";
 import { useLanguage, useT } from "@/i18n/LanguageProvider";
 import { sendEnquiry } from "@/lib/sendEnquiry";
 
+// Combines the ticked options of a multi-select group into one { de, en }
+// label, e.g. "Buchhaltung, Personalverrechnung", for the emails.
+export function selectedOptions(options, data, name) {
+  const values = data.getAll(name);
+  const chosen = options.filter((o) => values.includes(o.value));
+  if (!chosen.length) return undefined;
+  return {
+    de: chosen.map((o) => o.de).join(", "),
+    en: chosen.map((o) => o.en).join(", "),
+  };
+}
+
 // Shared submit logic for the contact and appointment forms.
 // `buildEnquiry(formData)` returns { fields, service, timeSlot }.
 export function useEnquirySubmit(kind, buildEnquiry) {

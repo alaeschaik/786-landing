@@ -206,6 +206,12 @@ const KIND = {
 
 const pick = (obj, lang) => (obj ? (lang === "en" ? obj.en : obj.de) : "");
 
+// "Leistung" for one chosen topic, "Leistungen" when several were ticked.
+const serviceLabel = (service, lang) =>
+  service?.de?.includes(",")
+    ? pick({ de: "Leistungen", en: "Services" }, lang)
+    : pick(LABELS.service, lang);
+
 function formatDate(date, lang) {
   try {
     return new Intl.DateTimeFormat(lang === "en" ? "en-GB" : "de-AT", {
@@ -242,7 +248,7 @@ export function renderOfficeNotification({ kind, lang, fields, service, timeSlot
     { label: LABELS.email.de, value: fields.email, href: fields.email ? `mailto:${fields.email}` : "" },
     { label: LABELS.phone.de, value: fields.phone, href: fields.phone ? `tel:${fields.phone.replace(/[^+\d]/g, "")}` : "" },
     { label: LABELS.company.de, value: fields.company },
-    { label: LABELS.service.de, value: service?.de },
+    { label: serviceLabel(service, "de"), value: service?.de },
     { label: LABELS.timeSlot.de, value: timeSlot?.de },
     { label: LABELS.language.de, value: lang === "en" ? "Englisch – bitte auf Englisch antworten" : "Deutsch" },
   ];
@@ -307,7 +313,7 @@ export function renderVisitorConfirmation({ kind, lang, fields, service, timeSlo
     { label: pick(LABELS.email, lang), value: fields.email },
     { label: pick(LABELS.phone, lang), value: fields.phone },
     { label: pick(LABELS.company, lang), value: fields.company },
-    { label: pick(LABELS.service, lang), value: pick(service, lang) },
+    { label: serviceLabel(service, lang), value: pick(service, lang) },
     { label: pick(LABELS.timeSlot, lang), value: pick(timeSlot, lang) },
   ];
 

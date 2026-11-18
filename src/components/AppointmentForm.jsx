@@ -10,6 +10,7 @@ import {
   PrivacyNote,
   SubmitButton,
   SuccessPanel,
+  selectedOptions,
   useEnquirySubmit,
 } from "./EnquiryFeedback";
 import { useT } from "@/i18n/LanguageProvider";
@@ -60,7 +61,7 @@ const buildEnquiry = (data) => ({
     message: field(data, "message"),
   },
   timeSlot: timeSlotOptions.find((o) => o.value === data.get("timeSlot")),
-  service: serviceOptions.find((o) => o.value === data.get("service")),
+  service: selectedOptions(serviceOptions, data, "service"),
 });
 
 const AppointmentForm = () => {
@@ -140,11 +141,15 @@ const AppointmentForm = () => {
               <fieldset>
                 <legend className="text-base/6 text-neutral-500">
                   {t("Worum geht es?", "What is it about?")}
+                  <span className="ml-1 text-sm text-neutral-400">
+                    {t("(Mehrfachauswahl möglich)", "(select all that apply)")}
+                  </span>
                 </legend>
                 <div className="mt-4 flex flex-wrap gap-2">
                   {serviceOptions.map((option) => (
                     <RadioInput
                       key={option.value}
+                      type="checkbox"
                       label={t(option.de, option.en)}
                       name="service"
                       value={option.value}
